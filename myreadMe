@@ -1,0 +1,6122 @@
+JOB PORTAL
+Applicant Features
+Authentication
+•  Register (First Name, Last Name, Phone Number, Email, Password, Date of Birth(user must be up to 18), Gender(optional))
+•  Continue with Google 
+•  Login with email & password 
+•  Forgot password 
+•  Reset password 
+•  Verify email 
+•  Resend verification email 
+•  Refresh token 
+•  Logout 
+•  Change password 
+•  Delete account
+
+Profile
+• Get My Profile
+• Create/Complete Profile (Professional Headline, Bio/About Me, Profile Picture, Contact(State, City, Address (Optional)), Career Information(Current Job Title, Years of Experience, Employment Status, Preferred Work Mode, Preferred Job Type, Expected Salary), Links(Portfolio, LinkedIn, GitHub)
+• Update Profile
+• Upload Profile Picture
+• Delete Profile Picture
+• Upload Resume
+• Replace Resume
+• Delete Resume
+• Get Public Profile
+• Add education (School, Degree, Field of Study, Start Date, End Date, Currently Studying, Grade/GPA (Optional))
+• Get all education
+• Update education
+• Delete education
+• Add work experiences (Company, Position, Employment Type, Start Date, End Date, Currently Working)
+• Get all work experiences 
+• Update work experiences
+• Delete work experiences
+• Add skills (Skill Name, Skill Level)
+• Get all skills
+• Update skills
+• Delete skills
+• Add Certifications
+• Get all Certifications
+• Update Certifications
+• Delete Certifications
+• Profile Completion
+
+Job Search
+• Browse Jobs (only active jobs)
+• Search Jobs (by keywords)
+• Filter Jobs(Category, Industry, Job Type, Experience Level, Salary Range, State, Work Mode, Employment Type, Posted Date, Education Level, Company, Skills)
+• Sort Jobs( Newest, Oldest, Highest Salary, Lowest Salary etc)
+• View Job Details (Job title , Company, Company logo, Location, Salary, Employment type, Work mode, Experience required, Education required, Required skills, Responsibilities, Qualifications, Benefits, Posted date, Closing date, Recruiter information)
+• Related Jobs
+• Featured Jobs
+• Latest Jobs
+• Recommended Jobs(personalized jobs based on profile and activity)
+• Popular Jobs
+• Jobs by Category
+• Jobs by Company
+• Save Jobs
+• Share Jobs
+
+Applications
+• Apply for a Job (Applicant account is active, Applicant profile meets a minimum completion percentage, Job is active, Application deadline has not passed, Applicant has not already applied, Resume uploaded etc)
+• View My Applications
+• View Application Details(Job details , Company, Resume submitted, Cover letter, Date applied , Current status, Interview information (if any))
+• Withdraw Application(Already hired, Offer accepted, Position closed etc)
+• Delete Withdrawn Application
+• Track Application Status (Applied, Under Review, Shortlisted, Assessment, Interview Scheduled, Interview Completed, Offer Extended, Offer Accepted, Offer Declined, Hired, Rejected, Withdrawn)
+• View Application Timeline
+• Update Submitted Resume(before the recruiter reviews the application)
+• Update Cover Letter(before review.)
+• View Saved Draft
+
+Notifications
+• Get My Notifications
+• Get Notification Details
+• Mark Notification as Read
+• Mark All Notifications as Read
+• Delete Notification
+• Delete All Notifications
+• Get Unread Notification Count
+Notification Types(Job Notifications, Application Notifications, Recruiter Notifications, Account Notifications)
+Messaging
+• Get Conversations
+• Get Conversation
+• Send Message
+• Edit Message (editing within 10mins)
+• Delete Message
+• Mark Messages as Read
+• Get Unread Count
+• Archive Conversation
+• Unarchive Conversation
+• Block Conversation 
+• Report Conversation
+
+Dashboard
+• Recent Applications, Total Applications
+• Upcoming Interviews
+• Recent Notifications
+• Recommended Jobs
+• Saved Jobs
+• Profile Completion
+• Recruiter Messages
+• Job Alerts
+
+Reviews
+• Create Review(Applicant has applied to at least one job from the company (or interviewed/worked), One review per applicant per company)
+• Get My Reviews
+• Get Review Details
+• Update Review
+• Delete Review
+• Get Company Reviews
+• Anonymous review
+
+Recruiter Features
+Authentication
+• Accept Invitation
+•  Set Password 
+•  Login 
+•  Continue with Google
+•  Forgot Password 
+•  Reset Password 
+•  Change Password 
+•  Refresh Token 
+•  Logout 
+•  Get Current Recruiter
+
+Company Profile
+• Get Company Profile
+• Complete Company Profile (Basic Information - (Company Name, Company Logo, Cover Image, About Company, Industry, Company Size, Founded Year), Contact Information – (Company Email, Phone Number, Website), Location – (State, City, Address, Postal Code), Social Media – (LinkedIn, Facebook, X (Twitter), Instagram, YouTube), Hiring Information – (Hiring Status (Open/Closed), Company Culture, Mission, Vision))
+• Update Company Profile
+• Upload Company Logo
+• Delete Company Logo
+• Upload Cover Image
+• Delete Cover Image
+• Get Public Company Profile (Company Name, Logo, Cover Image, About, Industry, Company Size, Website, Social Links, Open Jobs, Company Rating, Total Reviews)
+• View Company Statistics(Total Active Jobs, Total Closed Jobs, Total Applications, Total Recruiters, Average Rating, Total Reviews)
+• Manage Company Recruiters
+• Company Profile Completion
+
+Job Management
+• Create Job (Basic Information(Job Title, Job Description, Department, Job Category, Employment Type, Workplace Type), Requirements(Experience Level, Minimum Years of Experience, Education Level, Required Skills, Preferred Skills, Certifications), Compensation, Compensation, Compensation)
+• Get All Jobs
+• Get Job Details
+• Update Job
+• Delete Job
+• Publish Job
+• Unpublish Job
+• Close Job
+• Reopen Job
+• View Job Statistics
+• Get Job Applicants
+• Feature Job
+
+Applicant Management
+• Get All Applicants
+• Get Applicants for a Job
+• View Applicant Profile (Personal Information, Resume, Education, Experience, Skills, Certifications, Languages, Portfolio, Projects, Cover Letter, Application History 
+• View Cover Letter
+• Update Application Status (Applied, Under Review, Shortlisted, Assessment, Interview Scheduled, Interview Completed, Offer Extended, Offer Accepted, Offer Declined, Hired, Rejected)
+• Shortlist Applicant
+• Reject Applicant
+• Hire Applicant
+• Add Internal Notes
+• Update Internal Notes
+• Delete Internal Notes
+• Save Applicant
+• Remove Saved Applicant
+• Get Saved Applicants
+• Export Applicants
+• Add Applicant Rating
+
+Interview Management
+• Schedule Interview (Applicant must be Shortlisted or Assessment Passed, Application must not be withdrawn or rejected)  it must be in physical
+• Get All Interviews
+• Get Interview Details
+• Update Interview
+• Reschedule Interview
+• Cancel Interview
+• Complete Interview
+• Record Interview Outcome
+• Add Interview Notes
+• Update Interview Notes
+• Delete Interview Notes
+• Send Interview Reminder
+• Upcoming Interviews
+• Today's Interviews
+• Delete Interview (Only if it hasn't started.)
+Interview Status (Scheduled, Rescheduled, Completed, Cancelled, No Show)
+
+
+Messaging
+• Get Conversations
+• Get Conversation
+• Start Conversation
+• Send Message
+• Edit Message
+• Delete Message
+• Mark Messages as Read
+• Get Unread Count
+• Block Conversation
+• Report Conversation
+
+Analytics
+• Dashboard Analytics(Total Jobs, Active Jobs, Closed Jobs, Draft Jobs, Total Applications, Total Interviews, Total Hires, Total Rejections, Offer Acceptance Rate, Time to Hire, Average Applications per Job)
+• Job Performance
+• Application Analytics
+• Hiring Funnel
+• Interview Analytics
+• Top Performing Jobs
+• Recruiter Activity
+• Export Analytics
+
+Dashboard
+Dashboard Overview
+Recent Messages
+Jobs Expiring Soon
+Recent Notifications
+Upcoming Interviews
+Recent Applications
+
+
+Admin Features
+Authentication
+• Login
+• Logout
+• Refresh Token
+• Change Password
+• Forgot Password
+• Reset Password
+• Get Current Admin
+
+User Management
+• Get All Applicants
+• Get Applicant Details
+• Update Applicant
+• Suspend Applicant
+• Activate Applicant
+• Delete Applicant
+• Get All Recruiters
+• Get Recruiter Details
+• Create Recruiter
+• Update Recruiter
+• Suspend Recruiter
+• Activate Recruiter
+• Delete Recruiter
+• Resend Invitation
+• User Search
+• User Statistics
+
+Company Management
+• Get All Companies
+• Get Company Details
+• Create Company
+• Update Company
+• Suspend Company
+• Activate Company
+• Verify Company
+• Reject Company Verification
+• Delete Company
+• View Company Recruiters
+• View Company Jobs
+• View Company Statistics
+
+Job Management
+• Get All Jobs
+• Get Job Details
+• Update Job
+• Delete Job
+• Suspend Job
+• Restore Job
+• Feature Job
+• Remove Featured Status
+• Close Job
+• View Job Applicants
+• View Job Analytics
+
+Application Management
+• Get All Applications
+• Get Application Details
+• Delete Application
+• Restore Application
+• View Applicant Profile
+
+Categories
+• Create Category
+• Get All Categories
+• Get Category Details
+• Update Category
+• Activate Category
+• Deactivate Category
+• Delete Category
+• Get Jobs in a Category
+
+Reports
+• User Report
+• Job Report
+• Application Report
+• Recruitment Report
+• Company Report
+• Recruiter Performance Report
+• Applicant Activity Report
+• Custom Report
+• Export Report
+
+Analystics
+• User Analytics
+• Company Analytics
+• Job Analytics
+• Application Analytics
+• Recruitment Analytics
+• Recruiter Performance
+• Applicant Analytics
+• Export Analytics
+
+Reviews
+• Get All Reviews
+• Get Review Details
+• Update Review
+• Hide Review
+• Restore Review
+• Delete Review
+• View Company Reviews
+• Review Statistics
+
+Notifications
+• Get Notifications
+• Get Notification Details
+• Mark Notification as Read
+• Mark All Notifications as Read
+• Delete Notification
+• Delete All Read Notifications
+• Send Platform Announcement
+
+Audit Logs
+• Get All Audit Logs
+• Get Audit Log Details
+• Get User Activity History
+• Get Company Activity History
+• Get Job Activity History
+• Export Audit Logs
+
+
+Packages
+express 
+mongoose 
+dotenv 
+cors 
+helmet 
+morgan
+ compression 
+bcrypt 
+jsonwebtoken 
+cookie-parser
+ zod 
+multer 
+cloudinary 
+nodemailer 
+express-rate-limit 
+dayjs
+ http-status-codes
+ uuid 
+ nodemon
+express-mongo-sanitize
+ mongoose-paginate-v2
+
+ERD
+
+User
+•	_id
+•	firstName
+•	lastName
+•	email
+•	phoneNumber
+•	password
+•	googleId
+•	dateOfBirth
+•	gender
+•	role
+•	status
+•	emailVerified
+•	profileCompleted
+•	lastLogin
+•	refreshToken
+•	createdAt
+•	updatedAt
+
+Company
+•	_id
+•	name
+•	logo
+•	about
+•	industry
+•	companySize
+•	foundedYear
+•	website
+•	email
+•	phoneNumber
+•	state
+•	city
+•	address
+•	verificationStatus
+•	status
+•	createdAt
+•	updatedAt
+
+Recruiter
+•	_id
+•	user
+•	company
+•	jobTitle
+•	status
+•	createdAt
+•	updatedAt
+
+Category
+•	_id
+•	name
+•	description
+•	status
+•	createdAt
+•	updatedAt
+
+ApplicantProfile
+•	_id
+•	user
+•	professionalHeadline
+•	bio
+•	profilePicture
+•	resume
+•	state
+•	city
+•	address
+•	currentJobTitle
+•	yearsOfExperience
+•	employmentStatus
+•	preferredWorkMode
+•	preferredJobType
+•	expectedSalary
+•	portfolio
+•	linkedin
+•	github
+•	profileCompletion
+•	createdAt
+•	updatedAt
+
+Job
+•	_id
+•	recruiter
+•	company
+•	category
+•	title
+•	description
+•	employmentType
+•	workMode
+•	experienceLevel
+•	educationLevel
+•	salaryMin
+•	salaryMax
+•	state
+•	city
+•	applicationDeadline
+•	status
+•	featured
+•	createdAt
+•	updatedAt
+Application
+•	_id
+•	applicant
+•	job
+•	resume
+•	coverLetter
+•	status
+•	appliedAt
+•	withdrawnAt
+•	createdAt
+•	updatedAt
+
+Conversation
+•	_id
+•	applicant
+•	recruiter
+•	application
+•	status
+•	createdAt
+•	updatedAt
+
+Skill
+•	_id
+•	applicant
+•	name
+•	level
+•	createdAt
+•	updatedAt
+
+Education
+•	_id
+•	applicant
+•	school
+•	degree
+•	fieldOfStudy
+•	startDate
+•	endDate
+•	currentlyStudying
+•	grade
+•	createdAt
+•	updatedAt
+
+Experience
+•	_id
+•	applicant
+•	company
+•	position
+•	employmentType
+•	startDate
+•	endDate
+•	currentlyWorking
+•	createdAt
+•	updatedAt
+
+ApplicantSkill
+•	_id
+•	applicant
+•	skill
+•	level
+•	createdAt
+•	updatedAt
+Certification
+•	_id
+•	applicant
+•	name
+•	issuingOrganization
+•	issueDate
+•	expirationDate
+•	credentialUrl
+•	createdAt
+•	updatedAt
+•	
+JobSkill
+•	_id
+•	job
+•	skill
+•	createdAt
+•	updatedAt
+
+Interview
+•	_id
+•	application
+•	recruiter
+•	date
+•	location
+•	status
+•	notes
+•	createdAt
+•	updatedAt
+
+SavedJob
+•	_id
+•	applicant
+•	job
+•	createdAt
+
+Review
+•	_id
+•	applicant
+•	company
+•	rating
+•	comment
+•	anonymous
+•	createdAt
+•	updatedAt
+
+Message
+•	_id
+•	conversation
+•	sender
+•	message
+•	isRead
+•	createdAt
+•	updatedAt
+
+Notification
+•	_id
+•	user
+•	title
+•	message
+•	type
+•	isRead
+•	createdAt
+•	updatedAt
+
+AuditLog
+•	_id
+•	User
+•	role
+•	action
+•	entity
+•	entityId
+•	description
+•	ipAddress
+•	createdAt
+
+SupportTicket
+•	_id
+•	user
+•	subject
+•	category
+•	description
+•	status
+•	priority
+•	createdAt
+•	updatedAt
+
+SupportMessage
+•	_id
+•	ticket
+•	sender
+•	message
+•	createdAt
+•	updatedAt
+
+ERD
+POST /api/auth/register
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Check if Email Already Exists
+    ├── Yes → Return 409 Conflict
+    └── No
+          ↓
+Check if Phone Number Already Exists
+          ├── Yes → Return 409 Conflict
+          └── No
+                ↓
+Check User is 18+ Years Old
+                ├── No → Return 400 Bad Request
+                └── Yes
+                      ↓
+Hash Password
+                      ↓
+Create User
+                      ↓
+Generate Email Verification Token
+                      ↓
+Save Verification Token
+                      ↓
+Send Verification Email
+                      ↓
+Return 201 Created
+
+POST /api/auth/google
+Applicant
+    ↓
+Click "Continue with Google"
+    ↓
+Google Authentication
+    ↓
+Google Returns User Information
+    ↓
+Validate Google ID Token
+    ├── Invalid → Return 401 Unauthorized
+    └── Valid
+          ↓
+Check if User Exists by Google ID or Email
+          ├── Yes
+          │     ↓
+          │ Update Google ID (if needed)
+          │     ↓
+          │ Generate Access Token
+          │     ↓
+          │ Generate Refresh Token
+          │     ↓
+          │ Return 200 OK
+          │
+          └── No
+                ↓
+Create User
+                ↓
+Mark Email as Verified
+                ↓
+Generate Access Token
+                ↓
+Generate Refresh Token
+                ↓
+Return 201 Created
+
+POST /api/auth/login
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Find User by Email
+    ├── Not Found → Return 401 Unauthorized
+    └── Found
+          ↓
+Check Account Status
+          ├── Suspended/Inactive → Return 403 Forbidden
+          └── Active
+                ↓
+Verify Password
+                ├── Invalid → Return 401 Unauthorized
+                └── Valid
+                      ↓
+Check Email Verified
+                      ├── No → Return 403 Forbidden
+                      └── Yes
+                            ↓
+Generate Access Token
+                            ↓
+Generate Refresh Token
+                            ↓
+Update Last Login
+                            ↓
+Return 200 OK
+
+POST /api/auth/forgot-password
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Find User by Email
+    ├── User Not Found → Return 404 Not Found
+    └── User Found
+          ↓
+Generate Password Reset Token
+          ↓
+Save Password Reset Token
+          ↓
+Send Password Reset Email
+          ↓
+Return 200 OK
+
+POST /api/auth/reset-password
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Verify Reset Token
+    ├── Invalid/Expired Token → Return 400 Bad Request
+    └── Valid Token
+          ↓
+Find User
+          ├── User Not Found → Return 404 Not Found
+          └── User Found
+                ↓
+Hash New Password
+                ↓
+Update User Password
+                ↓
+Delete/Invalidate Reset Token
+                ↓
+Return 200 OK
+
+POST /api/auth/verify-email
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Find Verification Token
+    ├── Token Not Found → Return 400 Bad Request
+    └── Token Found
+          ↓
+Check Token Expiry
+          ├── Expired → Return 400 Bad Request
+          └── Valid
+                ↓
+Find User
+                ├── User Not Found → Return 404 Not Found
+                └── User Found
+                      ↓
+Mark Email as Verified
+                      ↓
+Delete Verification Token
+                      ↓
+Return 200 OK
+
+POST /api/auth/resend-verification
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Find User by Email
+    ├── User Not Found → Return 404 Not Found
+    └── User Found
+          ↓
+Check Email Already Verified
+          ├── Yes → Return 400 Bad Request
+          └── No
+                ↓
+Delete Existing Verification Token (if any)
+                ↓
+Generate New Verification Token
+                ↓
+Save Verification Token
+                ↓
+Send Verification Email
+                ↓
+Return 200 OK
+
+POST /api/auth/refresh-token
+Applicant
+    ↓
+Auth Controller
+    ↓
+Get Refresh Token
+    ├── Missing → Return 401 Unauthorized
+    └── Present
+          ↓
+Verify Refresh Token
+          ├── Invalid/Expired → Return 401 Unauthorized
+          └── Valid
+                ↓
+Find User
+                ├── User Not Found → Return 404 Not Found
+                └── User Found
+                      ↓
+Check Account Status
+                      ├── Suspended/Inactive → Return 403 Forbidden
+                      └── Active
+                            ↓
+Generate New Access Token
+                            ↓
+Generate New Refresh Token
+                            ↓
+Return 200 OK
+
+POST /api/auth/logout
+Applicant
+    ↓
+Auth Controller
+    ↓
+Get Refresh Token
+    ├── Missing → Return 401 Unauthorized
+    └── Present
+          ↓
+Verify Refresh Token (Optional)
+          ↓
+Invalidate/Delete Refresh Token
+          ↓
+Clear Authentication Cookie (if using cookies)
+          ↓
+Return 200 OK
+
+PATCH /api/auth/change-password
+Applicant
+    ↓
+Auth Controller
+    ↓
+Validate Request Body
+    ↓
+Find Authenticated User
+    ├── User Not Found → Return 404 Not Found
+    └── User Found
+          ↓
+Verify Current Password
+          ├── Invalid Password → Return 401 Unauthorized
+          └── Valid Password
+                ↓
+Check New Password ≠ Current Password
+                ├── Same Password → Return 400 Bad Request
+                └── Different Password
+                      ↓
+Hash New Password
+                      ↓
+Update User Password
+                      ↓
+Invalidate Existing Refresh Token(s)
+                      ↓
+Return 200 OK
+
+DELETE /api/auth/delete-account
+Applicant
+    ↓
+Auth Controller
+    ↓
+Find Authenticated User
+    ├── User Not Found → Return 404 Not Found
+    └── User Found
+          ↓
+Check Account Status
+          ├── Already Deleted → Return 400 Bad Request
+          └── Active
+                ↓
+Delete/Deactivate User Account
+                ↓
+Invalidate Refresh Token
+                ↓
+Delete Authentication Cookies (if applicable)
+                ↓
+Return 200 OK
+
+GET /api/applicants/me
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile by User ID
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Return Applicant Profile
+                ↓
+Return 200 OK
+
+POST /api/applicants/profile
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Validate Request Body
+          ↓
+Check Profile Already Exists
+          ├── Yes → Return 409 Conflict
+          └── No
+                ↓
+Upload Profile Picture (if provided)
+                ↓
+Create Applicant Profile
+                ↓
+Calculate Profile Completion
+                ↓
+Update User Profile Completed Status (if applicable)
+                ↓
+Return 201 Created
+
+PATCH /api/applicants/profile
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Validate Request Body
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Upload New Profile Picture (if provided)
+                ↓
+Update Applicant Profile
+                ↓
+Recalculate Profile Completion
+                ↓
+Update User Profile Completed Status (if applicable)
+                ↓
+Return 200 OK
+
+POST /api/applicants/profile-picture
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Check Applicant Profile Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Validate Uploaded Image
+                ├── Invalid File → Return 400 Bad Request
+                └── Valid
+                      ↓
+Upload Image to Cloudinary
+                      ↓
+Update Profile Picture
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+DELETE /api/applicants/profile-picture
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Check Profile Picture Exists
+                ├── No → Return 404 Not Found
+                └── Yes
+                      ↓
+Delete Image from Cloudinary
+                      ↓
+Remove Profile Picture Reference
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+POST /api/applicants/resume
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Check Resume Already Exists
+                ├── Yes → Return 409 Conflict (Use Replace Resume)
+                └── No
+                      ↓
+Validate Uploaded File
+                      ├── Invalid File → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Upload Resume to Cloudinary
+                            ↓
+Save Resume URL
+                            ↓
+Recalculate Profile Completion
+                            ↓
+Return 201 Created
+
+PATCH /api/applicants/resume
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Check Resume Exists
+                ├── No → Return 404 Not Found
+                └── Yes
+                      ↓
+Validate Uploaded File
+                      ├── Invalid File → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Delete Existing Resume from Cloudinary
+                            ↓
+Upload New Resume to Cloudinary
+                            ↓
+Update Resume URL
+                            ↓
+Return 200 OK
+
+DELETE /api/applicants/resume
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Check Resume Exists
+                ├── No → Return 404 Not Found
+                └── Yes
+                      ↓
+Delete Resume from Cloudinary
+                      ↓
+Remove Resume Reference
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+GET /api/applicants/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Applicant Controller
+          ↓
+Find Applicant Profile by ID
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Return Public Applicant Profile
+                ↓
+Return 200 OK
+
+POST /api/educations
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Education Controller
+          ↓
+Validate Request Body
+          ↓
+Check Applicant Profile Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Create Education
+                ↓
+Recalculate Profile Completion
+                ↓
+Return 201 Created
+
+GET /api/educations
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Education Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get All Educations
+                ↓
+Return 200 OK
+
+PATCH /api/educations/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Education Controller
+          ↓
+Validate Request Body
+          ↓
+Find Education by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Education Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Update Education
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+DELETE /api/educations/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Education Controller
+          ↓
+Find Education by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Education Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Education
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+POST /api/experiences
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Experience Controller
+          ↓
+Validate Request Body
+          ↓
+Check Applicant Profile Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Create Experience
+                ↓
+Recalculate Profile Completion
+                ↓
+Return 201 Created
+
+GET /api/experiences
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Experience Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get All Experiences
+                ↓
+Return 200 OK
+
+PATCH /api/experiences/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Experience Controller
+          ↓
+Validate Request Body
+          ↓
+Find Experience by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Experience Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Update Experience
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+DELETE /api/experiences/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Experience Controller
+          ↓
+Find Experience by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Experience Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Experience
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+POST /api/skills
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Skill Controller
+          ↓
+Validate Request Body
+          ↓
+Check Applicant Profile Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Check Skill Already Exists
+                ├── Yes → Return 409 Conflict
+                └── No
+                      ↓
+Create Skill
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 201 Created
+
+GET /api/skills
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Skill Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get All Skills
+                ↓
+Return 200 OK
+
+PATCH /api/skills/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Skill Controller
+          ↓
+Validate Request Body
+          ↓
+Find Skill by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Skill Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Update Skill
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+DELETE /api/skills/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Skill Controller
+          ↓
+Find Skill by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Skill Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Skill
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+POST /api/certifications
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Certification Controller
+          ↓
+Validate Request Body
+          ↓
+Check Applicant Profile Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Create Certification
+                ↓
+Recalculate Profile Completion
+                ↓
+Return 201 Created
+
+GET /api/certifications
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Certification Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get All Certifications
+                ↓
+Return 200 OK
+
+PATCH /api/certifications/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Certification Controller
+          ↓
+Validate Request Body
+          ↓
+Find Certification by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Certification Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Update Certification
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+DELETE /api/certifications/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Certification Controller
+          ↓
+Find Certification by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Certification Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Certification
+                      ↓
+Recalculate Profile Completion
+                      ↓
+Return 200 OK
+
+GET /api/jobs
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Get Query Parameters
+    ↓
+Apply Search (if provided)
+    ↓
+Apply Filters (if provided)
+    ↓
+Apply Sorting
+    ↓
+Paginate Results
+    ↓
+Get Active Jobs
+    ↓
+Return Jobs List
+    ↓
+Return 200 OK
+
+GET /api/jobs/featured
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Get Featured Jobs
+    ↓
+Get Only Published & Active Jobs
+    ↓
+Paginate Results
+    ↓
+Return Featured Jobs
+    ↓
+Return 200 OK
+
+GET /api/jobs/latest
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Get Latest Jobs
+    ↓
+Get Only Published & Active Jobs
+    ↓
+Sort by Created Date (Newest First)
+    ↓
+Paginate Results
+    ↓
+Return Latest Jobs
+    ↓
+Return 200 OK
+
+GET /api/jobs/popular
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Get Popular Jobs
+    ↓
+Get Only Published & Active Jobs
+    ↓
+Sort by Popularity (e.g., Most Applications)
+    ↓
+Paginate Results
+    ↓
+Return Popular Jobs
+    ↓
+Return 200 OK
+
+GET /api/jobs/recommended
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Job Controller
+          ↓
+Get Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Extract Applicant Preferences (Skills, Experience, Job Type, Work Mode, Location)
+                ↓
+Find Matching Published & Active Jobs
+                ↓
+Rank Recommended Jobs
+                ↓
+Paginate Results
+                ↓
+Return Recommended Jobs
+                ↓
+Return 200 OK
+
+GET /api/jobs/search
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Validate Search Query
+    ├── Missing Query → Return 400 Bad Request
+    └── Valid
+          ↓
+Search Published & Active Jobs
+          ↓
+Apply Filters (if provided)
+          ↓
+Apply Sorting
+          ↓
+Paginate Results
+          ↓
+Return Matching Jobs
+          ↓
+Return 200 OK
+
+GET /api/jobs/:id
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Find Job by ID
+    ├── Job Not Found → Return 404 Not Found
+    └── Job Found
+          ↓
+Check Job Status
+          ├── Not Published/Inactive → Return 404 Not Found
+          └── Published & Active
+                ↓
+Get Company Information
+                ↓
+Get Recruiter Information
+                ↓
+Get Required Skills
+                ↓
+Get Related Jobs
+                ↓
+Return Job Details
+                ↓
+Return 200 OK
+
+GET /api/jobs/category/:categoryId
+Applicant / Recruiter
+    ↓
+Job Controller
+    ↓
+Find Category by ID
+    ├── Category Not Found → Return 404 Not Found
+    └── Category Found
+          ↓
+Check Category Status
+          ├── Inactive → Return 404 Not Found
+          └── Active
+                ↓
+Get Published & Active Jobs in Category
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Jobs
+                ↓
+Return 200 OK
+
+POST /api/jobs/:id/save
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Job Controller
+          ↓
+Find Job by ID
+          ├── Job Not Found → Return 404 Not Found
+          └── Job Found
+                ↓
+Check Job Status
+                ├── Not Active/Published → Return 400 Bad Request
+                └── Active
+                      ↓
+Find Existing Saved Job
+                      ├── Already Saved → Return 409 Conflict
+                      └── Not Saved
+                            ↓
+Create Saved Job Record
+                            ↓
+Return 201 Created
+
+DELETE /api/jobs/:id/save
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Job Controller
+          ↓
+Find Saved Job by Applicant ID and Job ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Delete Saved Job Record
+                ↓
+Return 200 OK
+
+POST /api/jobs/:id/share
+Applicant
+    ↓
+Job Controller
+    ↓
+Find Job by ID
+    ├── Job Not Found → Return 404 Not Found
+    └── Job Found
+          ↓
+Check Job Status
+          ├── Not Published/Inactive → Return 400 Bad Request
+          └── Active
+                ↓
+Generate Share Link
+                ↓
+Track Share Event (Optional)
+                ↓
+Return Share URL
+                ↓
+Return 200 OK
+
+POST /api/applications
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Validate Request Body
+          ↓
+Find Job by ID
+          ├── Job Not Found → Return 404 Not Found
+          └── Job Found
+                ↓
+Check Job Status
+                ├── Not Active/Published → Return 400 Bad Request
+                └── Active
+                      ↓
+Check Application Deadline
+                      ├── Expired → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Find Applicant Profile
+                            ├── Not Found → Return 404 Not Found
+                            └── Found
+                                  ↓
+Check Profile Completion
+                                  ├── Incomplete → Return 400 Bad Request
+                                  └── Complete
+                                        ↓
+Check Resume Exists
+                                        ├── No Resume → Return 400 Bad Request
+                                        └── Has Resume
+                                              ↓
+Check Existing Application
+                                              ├── Already Applied → Return 409 Conflict
+                                              └── Not Applied
+                                                    ↓
+Create Application
+                                                    ↓
+Create Application Timeline
+                                                    ↓
+Send Notification to Recruiter
+                                                    ↓
+Return 201 Created
+
+GET /api/applications
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get All Applications by Applicant ID
+                ↓
+Populate Job Details
+                ↓
+Populate Company Details
+                ↓
+Apply Filters/Pagination (if provided)
+                ↓
+Return Applications List
+                ↓
+Return 200 OK
+
+GET /api/applications/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Job Details
+                      ↓
+Get Company Details
+                      ↓
+Get Application Timeline
+                      ↓
+Get Interview Information (if exists)
+                      ↓
+Return Application Details
+                      ↓
+Return 200 OK
+
+PATCH /api/applications/:id/withdraw
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Application Status
+                      ├── Hired/Offer Accepted/Closed → Return 400 Bad Request
+                      └── Can Withdraw
+                            ↓
+Update Application Status to Withdrawn
+                            ↓
+Set Withdrawn Date
+                            ↓
+Create Application Timeline Entry
+                            ↓
+Notify Recruiter
+                            ↓
+Return 200 OK
+
+DELETE /api/applications/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Application Status
+                      ├── Not Withdrawn → Return 400 Bad Request
+                      └── Withdrawn
+                            ↓
+Delete Application
+                            ↓
+Remove Application Timeline (if stored separately)
+                            ↓
+Return 200 OK
+
+PATCH /api/applications/:id/status
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Recruiter Has Access to Job
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate New Status
+                      ├── Invalid Status → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Status Transition Rules
+                            ├── Invalid Transition → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Update Application Status
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Send Notification to Applicant
+                                  ↓
+Return Updated Application
+                                  ↓
+Return 200 OK
+
+GET /api/applications/:id/timeline
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Application Timeline
+                      ↓
+Sort Timeline by Date
+                      ↓
+Return Timeline History
+                      ↓
+Return 200 OK
+
+PATCH /api/applications/:id/resume
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Application Status
+                      ├── Already Reviewed/Shortlisted → Return 400 Bad Request
+                      └── Still Editable
+                            ↓
+Validate New Resume File
+                            ├── Invalid File → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Upload New Resume
+                                  ↓
+Update Application Resume
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Notify Recruiter (Optional)
+                                  ↓
+Return Updated Application
+                                  ↓
+Return 200 OK
+
+PATCH /api/applications/:id/cover-letter
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Application Belongs to Applicant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Application Status
+                      ├── Already Reviewed/Shortlisted → Return 400 Bad Request
+                      └── Still Editable
+                            ↓
+Validate Cover Letter
+                            ├── Invalid → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Update Application Cover Letter
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Notify Recruiter (Optional)
+                                  ↓
+Return Updated Application
+                                  ↓
+Return 200 OK
+
+GET /api/applications/drafts
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Application Controller
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get Draft Applications by Applicant ID
+                ↓
+Filter Applications with Draft Status
+                ↓
+Populate Job Details
+                ↓
+Return Saved Drafts
+                ↓
+Return 200 OK
+
+POST /api/interviews
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Validate Request Body
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Verify Recruiter Owns Job
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Application Status
+                      ├── Not Shortlisted/Eligible → Return 400 Bad Request
+                      └── Eligible
+                            ↓
+Check Existing Interview
+                            ├── Exists → Return 409 Conflict
+                            └── Not Exists
+                                  ↓
+Create Interview
+                                  ↓
+Update Application Status to Interview Scheduled
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Send Notification to Applicant
+                                  ↓
+Return 201 Created
+
+GET /api/interviews
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Find Recruiter's Company/Jobs
+          ↓
+Get Interviews Related to Recruiter's Jobs
+          ↓
+Apply Filters (status, date, applicant)
+          ↓
+Sort Interviews
+          ↓
+Paginate Results
+          ↓
+Return Interviews List
+          ↓
+Return 200 OK
+
+GET /api/interviews/:id
+Recruiter / Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Find Interview by ID
+          ├── Interview Not Found → Return 404 Not Found
+          └── Interview Found
+                ↓
+Verify User Has Access to Interview
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Interview Details
+                      ↓
+Get Application Details
+                      ↓
+Get Applicant Details
+                      ↓
+Return Interview Information
+                      ↓
+Return 200 OK
+
+PATCH /api/interviews/:id
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Validate Request Body
+          ↓
+Find Interview by ID
+          ├── Interview Not Found → Return 404 Not Found
+          └── Interview Found
+                ↓
+Verify Recruiter Has Access to Interview
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Interview Status
+                      ├── Completed/Cancelled → Return 400 Bad Request
+                      └── Editable
+                            ↓
+Update Interview Details
+                            ↓
+Update Application Timeline Entry
+                            ↓
+Notify Applicant of Changes
+                            ↓
+Return Updated Interview
+                            ↓
+Return 200 OK
+
+PATCH /api/interviews/:id/reschedule
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Validate New Interview Date/Time
+          ├── Invalid → Return 400 Bad Request
+          └── Valid
+                ↓
+Find Interview by ID
+                ├── Interview Not Found → Return 404 Not Found
+                └── Interview Found
+                      ↓
+Verify Recruiter Has Access to Interview
+                      ├── No → Return 403 Forbidden
+                      └── Yes
+                            ↓
+Check Interview Status
+                            ├── Completed/Cancelled → Return 400 Bad Request
+                            └── Editable
+                                  ↓
+Update Interview Date/Time
+                                  ↓
+Update Interview Status to Rescheduled
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Send Notification to Applicant
+                                  ↓
+Return Updated Interview
+                                  ↓
+Return 200 OK
+
+PATCH /api/interviews/:id/cancel
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Find Interview by ID
+          ├── Interview Not Found → Return 404 Not Found
+          └── Interview Found
+                ↓
+Verify Recruiter Has Access to Interview
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Interview Status
+                      ├── Completed/Cancelled → Return 400 Bad Request
+                      └── Can Cancel
+                            ↓
+Update Interview Status to Cancelled
+                            ↓
+Update Application Timeline Entry
+                            ↓
+Send Cancellation Notification to Applicant
+                            ↓
+Return Updated Interview
+                            ↓
+Return 200 OK
+
+PATCH /api/interviews/:id/complete
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Find Interview by ID
+          ├── Interview Not Found → Return 404 Not Found
+          └── Interview Found
+                ↓
+Verify Recruiter Has Access to Interview
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Interview Status
+                      ├── Cancelled/Completed → Return 400 Bad Request
+                      └── Can Complete
+                            ↓
+Update Interview Status to Completed
+                            ↓
+Update Application Status (if required)
+                            ↓
+Create Application Timeline Entry
+                            ↓
+Send Notification to Applicant
+                            ↓
+Return Updated Interview
+                            ↓
+Return 200 OK
+
+PATCH /api/interviews/:id/outcome
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Validate Outcome Data
+          ├── Invalid → Return 400 Bad Request
+          └── Valid
+                ↓
+Find Interview by ID
+                ├── Interview Not Found → Return 404 Not Found
+                └── Interview Found
+                      ↓
+Verify Recruiter Has Access to Interview
+                      ├── No → Return 403 Forbidden
+                      └── Yes
+                            ↓
+Check Interview Status
+                            ├── Not Completed → Return 400 Bad Request
+                            └── Completed
+                                  ↓
+Update Interview Outcome
+                                  ↓
+Update Application Status
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Send Notification to Applicant
+                                  ↓
+Return Updated Interview
+                                  ↓
+Return 200 OK
+
+DELETE /api/interviews/:id
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Interview Controller
+          ↓
+Find Interview by ID
+          ├── Interview Not Found → Return 404 Not Found
+          └── Interview Found
+                ↓
+Verify Recruiter Has Access to Interview
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Interview Status
+                      ├── Completed → Return 400 Bad Request
+                      └── Can Delete
+                            ↓
+Delete Interview
+                            ↓
+Remove Related Timeline Entry (if stored separately)
+                            ↓
+Send Notification to Applicant (Optional)
+                            ↓
+Return 200 OK
+
+GET /api/companies
+Applicant / Recruiter
+    ↓
+Company Controller
+    ↓
+Get Query Parameters
+    ↓
+Apply Search (if provided)
+    ↓
+Apply Filters (industry, location, size, etc.)
+    ↓
+Get Verified & Active Companies
+    ↓
+Sort Companies
+    ↓
+Paginate Results
+    ↓
+Return Companies List
+    ↓
+Return 200 OK
+
+GET /api/companies/:id
+Applicant / Recruiter
+    ↓
+Company Controller
+    ↓
+Find Company by ID
+    ├── Company Not Found → Return 404 Not Found
+    └── Company Found
+          ↓
+Check Company Status
+          ├── Inactive/Unverified → Return 404 Not Found
+          └── Active
+                ↓
+Get Company Details
+                ↓
+Get Company Jobs
+                ↓
+Get Company Reviews
+                ↓
+Return Company Profile
+                ↓
+Return 200 OK
+
+PATCH /api/companies/profile
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Find Recruiter's Company
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Validate Request Body
+                ├── Invalid → Return 400 Bad Request
+                └── Valid
+                      ↓
+Check Company Name Conflict (if changed)
+                      ├── Name Already Exists → Return 409 Conflict
+                      └── No Conflict
+                            ↓
+Update Company Profile
+                            ↓
+Save Updated Company
+                            ↓
+Return Updated Company
+                            ↓
+Return 200 OK
+
+POST /api/companies/logo
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Check Recruiter Company Exists
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Validate Uploaded Logo File
+                ├── Invalid File → Return 400 Bad Request
+                └── Valid
+                      ↓
+Upload Logo to Cloudinary
+                      ↓
+Update Company Logo URL
+                      ↓
+Return Updated Company
+                      ↓
+Return 200 OK
+
+DELETE /api/companies/logo
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Find Recruiter's Company
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Check Company Logo Exists
+                ├── No → Return 404 Not Found
+                └── Yes
+                      ↓
+Delete Logo from Cloudinary
+                      ↓
+Remove Logo URL Reference
+                      ↓
+Update Company Record
+                      ↓
+Return Updated Company
+                      ↓
+Return 200 OK
+
+POST /api/companies/cover-image
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Find Recruiter's Company
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Validate Uploaded Cover Image File
+                ├── Invalid File → Return 400 Bad Request
+                └── Valid
+                      ↓
+Upload Cover Image to Cloudinary
+                      ↓
+Update Company Cover Image URL
+                      ↓
+Return Updated Company
+                      ↓
+Return 200 OK
+
+DELETE /api/companies/cover-image
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Find Recruiter's Company
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Check Company Cover Image Exists
+                ├── No → Return 404 Not Found
+                └── Yes
+                      ↓
+Delete Cover Image from Cloudinary
+                      ↓
+Remove Cover Image URL Reference
+                      ↓
+Update Company Record
+                      ↓
+Return Updated Company
+                      ↓
+Return 200 OK
+
+GET /api/companies/:id/statistics
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Company Controller
+          ↓
+Find Company by ID
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Verify User Permission
+                ├── Not Owner/Admin → Return 403 Forbidden
+                └── Authorized
+                      ↓
+Gather Company Statistics
+                      ↓
+Calculate Metrics
+                      ├── Total Jobs Posted
+                      ├── Active Jobs
+                      ├── Total Applications Received
+                      ├── Applications by Status
+                      ├── Total Interviews
+                      ├── Hires Made
+                      └── Company Views
+                            ↓
+Return Statistics Data
+                            ↓
+Return 200 OK
+
+GET /api/recruiters/me
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Get Recruiter ID from Token
+          ↓
+Find Recruiter Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get Recruiter Details
+                ↓
+Get Associated Company Details
+                ↓
+Get Recruiter Role & Permissions
+                ↓
+Return Recruiter Profile
+                ↓
+Return 200 OK
+
+GET /api/recruiters/applicants
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Get Recruiter Company ID
+          ↓
+Verify Recruiter Has Company Access
+          ├── No Company → Return 404 Not Found
+          └── Authorized
+                ↓
+Get Jobs Posted by Company
+                ↓
+Get Applications for Company Jobs
+                ↓
+Populate Applicant Details
+                ↓
+Apply Filters (job, status, experience, skills)
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Applicants List
+                ↓
+Return 200 OK
+
+GET /api/recruiters/jobs/:jobId/applicants
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Job by Job ID
+          ├── Job Not Found → Return 404 Not Found
+          └── Job Found
+                ↓
+Verify Recruiter Owns Job
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Applications for Job
+                      ↓
+Populate Applicant Details
+                      ↓
+Apply Filters (status, skills, experience)
+                      ↓
+Apply Sorting
+                      ↓
+Paginate Results
+                      ↓
+Return Applicants List
+                      ↓
+Return 200 OK
+
+PATCH /api/recruiters/applications/:id/status
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Find Associated Job
+                ↓
+Verify Recruiter Owns Job
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate New Application Status
+                      ├── Invalid Status → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Status Transition Rules
+                            ├── Invalid Transition → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Update Application Status
+                                  ↓
+Create Application Timeline Entry
+                                  ↓
+Send Notification to Applicant
+                                  ↓
+Return Updated Application
+                                  ↓
+Return 200 OK
+
+POST /api/recruiters/applicants/:id/save
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Applicant by ID
+          ├── Applicant Not Found → Return 404 Not Found
+          └── Applicant Found
+                ↓
+Verify Recruiter Company Access
+                ├── No Access → Return 403 Forbidden
+                └── Authorized
+                      ↓
+Check Existing Saved Applicant
+                      ├── Already Saved → Return 409 Conflict
+                      └── Not Saved
+                            ↓
+Create Saved Applicant Record
+                            ↓
+Return Saved Applicant
+                            ↓
+Return 201 Created
+
+DELETE /api/recruiters/applicants/:id/save
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Saved Applicant by Recruiter ID and Applicant ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Recruiter Company Access
+                ├── No Access → Return 403 Forbidden
+                └── Authorized
+                      ↓
+Delete Saved Applicant Record
+                      ↓
+Return 200 OK
+
+POST /api/recruiters/applicants/:id/rating
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Applicant by ID
+          ├── Applicant Not Found → Return 404 Not Found
+          └── Applicant Found
+                ↓
+Verify Recruiter Company Access
+                ├── No Access → Return 403 Forbidden
+                └── Authorized
+                      ↓
+Validate Rating Data
+                      ├── Invalid Rating → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Existing Applicant Rating
+                            ├── Exists → Update Rating
+                            └── Not Exists → Create Rating
+                                  ↓
+Save Rating Record
+                                  ↓
+Return Applicant Rating
+                                  ↓
+Return 201 Created
+
+POST /api/recruiters/applications/:id/note
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Application by ID
+          ├── Application Not Found → Return 404 Not Found
+          └── Application Found
+                ↓
+Find Associated Job
+                ↓
+Verify Recruiter Owns Job
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate Note Content
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Create Application Note
+                            ↓
+Link Note to Recruiter & Application
+                            ↓
+Save Note Record
+                            ↓
+Return Created Note
+                            ↓
+Return 201 Created
+
+PATCH /api/recruiters/notes/:id
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Note by ID
+          ├── Note Not Found → Return 404 Not Found
+          └── Note Found
+                ↓
+Verify Note Belongs to Recruiter
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate Updated Note Content
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Update Note
+                            ↓
+Save Updated Note
+                            ↓
+Return Updated Note
+                            ↓
+Return 200 OK
+
+DELETE /api/recruiters/notes/:id
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Recruiter Controller
+          ↓
+Find Note by ID
+          ├── Note Not Found → Return 404 Not Found
+          └── Note Found
+                ↓
+Verify Note Belongs to Recruiter
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Note
+                      ↓
+Remove Note Record
+                      ↓
+Return 200 OK
+
+GET /api/conversations
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Get User ID from Token
+          ↓
+Find Conversations Where User Is Participant
+          ↓
+Populate Other Participant Details
+          ↓
+Get Latest Message for Each Conversation
+          ↓
+Get Unread Message Count
+          ↓
+Sort Conversations by Latest Activity
+          ↓
+Return Conversations List
+          ↓
+Return 200 OK
+
+GET /api/conversations/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Conversation Details
+                      ↓
+Get Participants Information
+                      ↓
+Get Messages in Conversation
+                      ↓
+Sort Messages by Created Date
+                      ↓
+Mark Unread Messages as Read
+                      ↓
+Return Conversation Data
+                      ↓
+Return 200 OK
+
+POST /api/conversations
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Validate Receiver Information
+          ↓
+Check Receiver Exists
+          ├── User Not Found → Return 404 Not Found
+          └── User Found
+                ↓
+Check Conversation Permission
+                ↓
+Verify Users Can Communicate
+                ├── Not Allowed → Return 403 Forbidden
+                └── Allowed
+                      ↓
+Check Existing Conversation
+                      ├── Exists → Return Existing Conversation
+                      └── Not Exists
+                            ↓
+Create New Conversation
+                            ↓
+Add Participants
+                            ↓
+Return Conversation
+                            ↓
+Return 201 Created
+
+PATCH /api/conversations/:id/archive
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Update Conversation Status to Archived
+                      ↓
+Save Archive Timestamp
+                      ↓
+Return Updated Conversation
+                      ↓
+Return 200 OK
+
+PATCH /api/conversations/:id/unarchive
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Conversation Status
+                      ├── Already Active → Return 400 Bad Request
+                      └── Archived
+                            ↓
+Update Conversation Status to Active
+                            ↓
+Remove Archive Timestamp
+                            ↓
+Save Conversation
+                            ↓
+Return Updated Conversation
+                            ↓
+Return 200 OK
+
+PATCH /api/conversations/:id/block
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Block Status
+                      ├── Already Blocked → Return 400 Bad Request
+                      └── Not Blocked
+                            ↓
+Update Conversation Status to Blocked
+                            ↓
+Add Blocking User Reference
+                            ↓
+Save Block Timestamp
+                            ↓
+Prevent Further Messages
+                            ↓
+Return Updated Conversation
+                            ↓
+Return 200 OK
+
+POST /api/conversations/:id/report
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Conversation Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate Report Reason
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Existing Report
+                            ├── Already Reported → Return 409 Conflict
+                            └── Not Reported
+                                  ↓
+Create Conversation Report
+                                  ↓
+Link Report to User & Conversation
+                                  ↓
+Notify Admin/Support Team
+                                  ↓
+Return Report Confirmation
+                                  ↓
+Return 201 Created
+
+GET /api/messages/:conversationId
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Find Conversation by ID
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Messages by Conversation ID
+                      ↓
+Populate Sender Information
+                      ↓
+Sort Messages by Created Date
+                      ↓
+Mark Unread Messages as Read
+                      ↓
+Return Messages List
+                      ↓
+Return 200 OK
+
+POST /api/messages
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Validate Message Data
+          ↓
+Find Conversation
+          ├── Conversation Not Found → Return 404 Not Found
+          └── Conversation Found
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Conversation Status
+                      ├── Blocked/Archived → Return 400 Bad Request
+                      └── Active
+                            ↓
+Create Message
+                            ↓
+Save Message
+                            ↓
+Update Conversation Last Message
+                            ↓
+Update Conversation Timestamp
+                            ↓
+Send Real-time Notification
+                            ↓
+Return Created Message
+                            ↓
+Return 201 Created
+
+PATCH /api/messages/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Find Message by ID
+          ├── Message Not Found → Return 404 Not Found
+          └── Message Found
+                ↓
+Verify User Is Message Sender
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Message Edit Permission
+                      ├── Time Limit Exceeded → Return 400 Bad Request
+                      └── Allowed
+                            ↓
+Validate Updated Message Content
+                            ├── Invalid → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Update Message
+                                  ↓
+Save Updated Message
+                                  ↓
+Update Conversation Last Message
+                                  ↓
+Send Real-time Update Notification
+                                  ↓
+Return Updated Message
+                                  ↓
+Return 200 OK
+
+DELETE /api/messages/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Find Message by ID
+          ├── Message Not Found → Return 404 Not Found
+          └── Message Found
+                ↓
+Verify User Is Message Sender
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Message Delete Permission
+                      ├── Not Allowed → Return 400 Bad Request
+                      └── Allowed
+                            ↓
+Delete Message / Soft Delete Message
+                            ↓
+Update Conversation Last Message (if needed)
+                            ↓
+Send Real-time Update Notification
+                            ↓
+Return 200 OK
+
+PATCH /api/messages/read
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Get User ID from Token
+          ↓
+Validate Conversation/Message IDs
+          ├── Invalid Data → Return 400 Bad Request
+          └── Valid
+                ↓
+Find Messages
+                ↓
+Verify User Is Participant
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Mark Unread Messages as Read
+                      ↓
+Update Read Timestamp
+                      ↓
+Save Message Updates
+                      ↓
+Send Read Receipt Notification (Optional)
+                      ↓
+Return Updated Messages
+                      ↓
+Return 200 OK
+
+GET /api/messages/unread-count
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Message Controller
+          ↓
+Get User ID from Token
+          ↓
+Find Conversations User Participates In
+          ↓
+Count Unread Messages
+          ↓
+Filter Messages Not Sent by Current User
+          ↓
+Return Unread Message Count
+          ↓
+Return 200 OK
+
+GET /api/notifications
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Get User ID from Token
+          ↓
+Find Notifications Belonging to User
+          ↓
+Apply Filters (read/unread, type, date)
+          ↓
+Sort Notifications by Created Date (Newest First)
+          ↓
+Paginate Results
+          ↓
+Return Notifications List
+          ↓
+Return 200 OK
+
+GET /api/notifications/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Find Notification by ID
+          ├── Notification Not Found → Return 404 Not Found
+          └── Notification Found
+                ↓
+Verify Notification Belongs to User
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Notification Details
+                      ↓
+Mark Notification as Read (if unread)
+                      ↓
+Save Notification Update
+                      ↓
+Return Notification Data
+                      ↓
+Return 200 OK
+
+PATCH /api/notifications/:id/read
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Find Notification by ID
+          ├── Notification Not Found → Return 404 Not Found
+          └── Notification Found
+                ↓
+Verify Notification Belongs to User
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Check Notification Status
+                      ├── Already Read → Return 200 OK
+                      └── Unread
+                            ↓
+Update Notification Status to Read
+                            ↓
+Set Read Timestamp
+                            ↓
+Save Notification
+                            ↓
+Return Updated Notification
+                            ↓
+Return 200 OK
+
+PATCH /api/notifications/read-all
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Get User ID from Token
+          ↓
+Find All Unread Notifications Belonging to User
+          ↓
+Check Unread Notifications Exist
+          ├── None → Return 200 OK
+          └── Exist
+                ↓
+Update All Notifications Status to Read
+                ↓
+Set Read Timestamp
+                ↓
+Save Notification Updates
+                ↓
+Return Updated Count
+                ↓
+Return 200 OK
+
+DELETE /api/notifications/:id
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Find Notification by ID
+          ├── Notification Not Found → Return 404 Not Found
+          └── Notification Found
+                ↓
+Verify Notification Belongs to User
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Notification
+                      ↓
+Remove Notification Record
+                      ↓
+Return 200 OK
+
+DELETE /api/notifications
+Applicant / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Notification Controller
+          ↓
+Get User ID from Token
+          ↓
+Find All Notifications Belonging to User
+          ↓
+Check Notifications Exist
+          ├── None → Return 404 Not Found
+          └── Exist
+                ↓
+Delete All User Notifications
+                ↓
+Remove Notification Records
+                ↓
+Return Deleted Count
+                ↓
+Return 200 OK
+
+POST /api/reviews
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Review Controller
+          ↓
+Validate Review Data
+          ↓
+Find Company / Recruiter / Job Being Reviewed
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Applicant Eligibility
+                ├── No Previous Interaction → Return 403 Forbidden
+                └── Eligible
+                      ↓
+Check Existing Review
+                      ├── Already Reviewed → Return 409 Conflict
+                      └── No Review
+                            ↓
+Create Review
+                            ↓
+Calculate/Update Rating Average
+                            ↓
+Save Review
+                            ↓
+Notify Company (Optional)
+                            ↓
+Return Created Review
+                            ↓
+Return 201 Created
+GET /api/reviews
+Applicant / Recruiter / Public User
+    ↓
+Review Controller
+    ↓
+Get Query Parameters
+    ↓
+Apply Filters (company, job, rating, user, etc.)
+    ↓
+Get Reviews
+    ↓
+Populate Reviewer Information
+    ↓
+Populate Reviewed Entity Information
+    ↓
+Sort Reviews (Newest/Highest Rating)
+    ↓
+Paginate Results
+    ↓
+Return Reviews List
+    ↓
+Return 200 OK
+
+GET /api/reviews/:id
+Applicant / Recruiter / Public User
+    ↓
+Review Controller
+    ↓
+Find Review by ID
+    ├── Review Not Found → Return 404 Not Found
+    └── Review Found
+          ↓
+Get Reviewer Information
+          ↓
+Get Reviewed Entity Information
+          ↓
+Return Review Details
+          ↓
+Return 200 OK
+
+PATCH /api/reviews/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Review Controller
+          ↓
+Find Review by ID
+          ├── Review Not Found → Return 404 Not Found
+          └── Review Found
+                ↓
+Verify User Is Review Owner
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate Updated Review Data
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Update Review
+                            ↓
+Recalculate Rating Average
+                            ↓
+Save Updated Review
+                            ↓
+Return Updated Review
+                            ↓
+Return 200 OK
+
+DELETE /api/reviews/:id
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Review Controller
+          ↓
+Find Review by ID
+          ├── Review Not Found → Return 404 Not Found
+          └── Review Found
+                ↓
+Verify User Is Review Owner
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Delete Review
+                      ↓
+Recalculate Rating Average
+                      ↓
+Remove Review Record
+                      ↓
+Return 200 OK
+
+GET /api/companies/:id/reviews
+Applicant / Recruiter / Public User
+    ↓
+Company Controller
+    ↓
+Find Company by ID
+    ├── Company Not Found → Return 404 Not Found
+    └── Company Found
+          ↓
+Get Company Reviews
+          ↓
+Populate Reviewer Information
+          ↓
+Apply Filters (rating, date, etc.)
+          ↓
+Calculate Average Rating
+          ↓
+Sort Reviews (Newest/Highest Rating)
+          ↓
+Paginate Results
+          ↓
+Return Company Reviews
+          ↓
+Return 200 OK
+
+POST /api/categories
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Category Controller
+                ↓
+Validate Category Data
+                ├── Invalid → Return 400 Bad Request
+                └── Valid
+                      ↓
+Check Category Name Exists
+                      ├── Exists → Return 409 Conflict
+                      └── Not Exists
+                            ↓
+Create Category
+                            ↓
+Save Category Record
+                            ↓
+Return Created Category
+                            ↓
+Return 201 Created
+
+GET /api/categories
+Applicant / Recruiter / Public User
+    ↓
+Category Controller
+    ↓
+Get Query Parameters
+    ↓
+Fetch Active Categories
+    ↓
+Count Jobs in Each Category (Optional)
+    ↓
+Apply Sorting (Name, Popularity, Job Count)
+    ↓
+Paginate Results (if required)
+    ↓
+Return Categories List
+    ↓
+Return 200 OK
+
+GET /api/categories/:id
+Applicant / Recruiter / Public User
+    ↓
+Category Controller
+    ↓
+Find Category by ID
+    ├── Category Not Found → Return 404 Not Found
+    └── Category Found
+          ↓
+Check Category Status
+          ├── Inactive → Return 404 Not Found
+          └── Active
+                ↓
+Get Category Details
+                ↓
+Get Jobs Under Category
+                ↓
+Count Available Jobs
+                ↓
+Return Category Information
+                ↓
+Return 200 OK
+
+PATCH /api/categories/:id
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Category Controller
+                ↓
+Find Category by ID
+                ├── Category Not Found → Return 404 Not Found
+                └── Category Found
+                      ↓
+Validate Updated Category Data
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Category Name Conflict
+                            ├── Exists → Return 409 Conflict
+                            └── No Conflict
+                                  ↓
+Update Category
+                                  ↓
+Save Updated Category
+                                  ↓
+Return Updated Category
+                                  ↓
+Return 200 OK
+
+DELETE /api/categories/:id
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Category Controller
+                ↓
+Find Category by ID
+                ├── Category Not Found → Return 404 Not Found
+                └── Category Found
+                      ↓
+Check Category Usage
+                      ├── Has Jobs Assigned → Return 400 Bad Request
+                      └── No Jobs Assigned
+                            ↓
+Delete Category
+                            ↓
+Remove Category Record
+                            ↓
+Return 200 OK
+
+GET /api/dashboard/applicant  
+Applicant
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Dashboard Controller
+          ↓
+Get Applicant ID from Token
+          ↓
+Find Applicant Profile
+          ├── Profile Not Found → Return 404 Not Found
+          └── Profile Found
+                ↓
+Get Application Statistics
+                ├── Total Applications
+                ├── Pending Applications
+                ├── Shortlisted Applications
+                ├── Interview Applications
+                └── Hired Applications
+                ↓
+Get Recent Applications
+                ↓
+Get Upcoming Interviews
+                ↓
+Get Saved Jobs Count
+                ↓
+Get Unread Notifications Count
+                ↓
+Get Recommended Jobs
+                ↓
+Build Dashboard Summary
+                ↓
+Return Dashboard Data
+                ↓
+Return 200 OK
+
+GET /api/dashboard/recruiter  
+Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Dashboard Controller
+          ↓
+Get Recruiter ID from Token
+          ↓
+Find Recruiter's Company
+          ├── Company Not Found → Return 404 Not Found
+          └── Company Found
+                ↓
+Get Job Statistics
+                ├── Total Jobs
+                ├── Active Jobs
+                ├── Draft Jobs
+                └── Closed Jobs
+                ↓
+Get Application Statistics
+                ├── Total Applications
+                ├── Pending Applications
+                ├── Shortlisted Applications
+                ├── Interview Applications
+                └── Hired Applications
+                ↓
+Get Recent Applications
+                ↓
+Get Upcoming Interviews
+                ↓
+Get Jobs With Highest Applications
+                ↓
+Get Unread Notifications Count
+                ↓
+Build Dashboard Summary
+                ↓
+Return Dashboard Data
+                ↓
+Return 200 OK
+
+GET /api/dashboard/admin  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Dashboard Controller
+                ↓
+Get Platform Statistics
+                ├── Total Users
+                ├── Total Applicants
+                ├── Total Recruiters
+                ├── Total Companies
+                └── Total Jobs
+                ↓
+Get Job Statistics
+                ├── Active Jobs
+                ├── Draft Jobs
+                ├── Closed Jobs
+                └── Jobs by Category
+                ↓
+Get Application Statistics
+                ├── Total Applications
+                ├── Pending Applications
+                ├── Interviews
+                ├── Hires
+                └── Withdrawn Applications
+                ↓
+Get Recent Platform Activity
+                ↓
+Get Recent Users / Companies
+                ↓
+Get Pending Verifications / Reports
+                ↓
+Get Platform Trends
+                ↓
+Build Admin Dashboard Summary
+                ↓
+Return Dashboard Data
+                ↓
+Return 200 OK
+
+GET /api/analytics/jobs  
+Recruiter / Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Analytics Controller
+                ↓
+Get Company / Recruiter Scope
+                ↓
+Fetch Job Data
+                ↓
+Calculate Job Analytics
+                ├── Total Jobs
+                ├── Active Jobs
+                ├── Draft Jobs
+                ├── Closed Jobs
+                ├── Jobs by Category
+                ├── Jobs by Location
+                └── Jobs Over Time
+                ↓
+Calculate Application Metrics
+                ├── Applications per Job
+                ├── Average Applications per Job
+                └── Top Performing Jobs
+                ↓
+Build Analytics Summary
+                ↓
+Return Job Analytics
+                ↓
+Return 200 OK
+
+GET /api/analytics/applications  
+Recruiter / Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Analytics Controller
+                ↓
+Get Recruiter / Company Scope
+                ↓
+Fetch Applications
+                ↓
+Calculate Application Analytics
+                ├── Total Applications
+                ├── Applications by Status
+                ├── Applications Over Time
+                ├── Applications per Job
+                ├── Average Applications per Job
+                └── Application Conversion Rate
+                ↓
+Calculate Hiring Metrics
+                ├── Shortlisted
+                ├── Interviews
+                ├── Hires
+                └── Withdrawn
+                ↓
+Build Analytics Summary
+                ↓
+Return Application Analytics
+                ↓
+Return 200 OK
+
+GET /api/analytics/interviews  
+Recruiter / Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Analytics Controller
+                ↓
+Get Recruiter / Company Scope
+                ↓
+Fetch Interviews
+                ↓
+Calculate Interview Analytics
+                ├── Total Interviews
+                ├── Scheduled Interviews
+                ├── Completed Interviews
+                ├── Cancelled Interviews
+                ├── Rescheduled Interviews
+                └── Interviews Over Time
+                ↓
+Calculate Interview Outcomes
+                ├── Passed
+                ├── Failed
+                ├── Pending
+                └── No-show
+                ↓
+Calculate Interview Metrics
+                ├── Completion Rate
+                ├── Cancellation Rate
+                └── Success Rate
+                ↓
+Build Analytics Summary
+                ↓
+Return Interview Analytics
+                ↓
+Return 200 OK
+
+GET /api/analytics/recruitment  
+Recruiter / Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Analytics Controller
+                ↓
+Get Recruiter / Company Scope
+                ↓
+Fetch Jobs & Applications
+                ↓
+Calculate Recruitment Metrics
+                ├── Total Jobs Posted
+                ├── Total Applications
+                ├── Shortlisted Candidates
+                ├── Interviews Scheduled
+                ├── Offers Made
+                └── Hires
+                ↓
+Calculate Recruitment Rates
+                ├── Application → Shortlist Rate
+                ├── Shortlist → Interview Rate
+                ├── Interview → Hire Rate
+                └── Overall Hire Rate
+                ↓
+Calculate Recruitment Trends
+                ├── Applications Over Time
+                ├── Hires Over Time
+                └── Average Time to Hire
+                ↓
+Build Recruitment Analytics Summary
+                ↓
+Return Recruitment Analytics
+                ↓
+Return 200 OK
+
+GET /api/analytics/users  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Analytics Controller
+                ↓
+Fetch User Data
+                ↓
+Calculate User Analytics
+                ├── Total Users
+                ├── Total Applicants
+                ├── Total Recruiters
+                ├── New Users
+                ├── Active Users
+                └── Inactive Users
+                ↓
+Calculate User Trends
+                ├── User Registrations Over Time
+                ├── Applicants Over Time
+                └── Recruiters Over Time
+                ↓
+Calculate User Distribution
+                ├── Users by Role
+                ├── Users by Location
+                └── Users by Account Status
+                ↓
+Build User Analytics Summary
+                ↓
+Return User Analytics
+                ↓
+Return 200 OK
+
+GET /api/analytics/companies  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Analytics Controller
+                ↓
+Fetch Company Data
+                ↓
+Calculate Company Analytics
+                ├── Total Companies
+                ├── Verified Companies
+                ├── Unverified Companies
+                ├── Active Companies
+                └── Inactive Companies
+                ↓
+Calculate Company Trends
+                ├── Companies Registered Over Time
+                ├── Companies Verified Over Time
+                └── Companies by Industry
+                ↓
+Calculate Company Job Metrics
+                ├── Jobs per Company
+                ├── Active Jobs per Company
+                └── Applications per Company
+                ↓
+Calculate Top Companies
+                ├── Most Active
+                ├── Most Jobs Posted
+                └── Most Applications Received
+                ↓
+Build Company Analytics Summary
+                ↓
+Return Company Analytics
+                ↓
+Return 200 OK
+
+GET /api/reports/users  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Report Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Role
+                ├── Account Status
+                ├── Registration Date
+                └── Location
+                ↓
+Fetch User Data
+                ↓
+Generate User Report
+                ├── Total Users
+                ├── Applicants
+                ├── Recruiters
+                ├── Active Users
+                ├── Inactive Users
+                └── New Users
+                ↓
+Generate Report File (Optional)
+                ↓
+Return User Report
+                ↓
+Return 200 OK
+
+GET /api/reports/jobs  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Report Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Category
+                ├── Company
+                ├── Job Status
+                ├── Location
+                └── Date Range
+                ↓
+Fetch Job Data
+                ↓
+Generate Job Report
+                ├── Total Jobs
+                ├── Active Jobs
+                ├── Draft Jobs
+                ├── Closed Jobs
+                ├── Jobs by Category
+                ├── Jobs by Company
+                └── Jobs by Location
+                ↓
+Include Application Metrics
+                ├── Total Applications
+                ├── Applications per Job
+                └── Average Applications per Job
+                ↓
+Generate Report File (Optional)
+                ↓
+Return Job Report
+                ↓
+Return 200 OK
+
+GET /api/reports/applications  
+Admin / Recruiter
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Report Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Job
+                ├── Company
+                ├── Application Status
+                ├── Date Range
+                └── Applicant
+                ↓
+Fetch Application Data
+                ↓
+Generate Application Report
+                ├── Total Applications
+                ├── Applications by Status
+                ├── Applications by Job
+                ├── Applications by Company
+                └── Applications Over Time
+                ↓
+Calculate Hiring Metrics
+                ├── Shortlisted
+                ├── Interviews
+                ├── Hires
+                └── Withdrawn
+                ↓
+Generate Report File (Optional)
+                ↓
+Return Application Report
+                ↓
+Return 200 OK
+
+GET /api/reports/companies  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Report Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Industry
+                ├── Company Status
+                ├── Verification Status
+                ├── Location
+                └── Date Range
+                ↓
+Fetch Company Data
+                ↓
+Generate Company Report
+                ├── Total Companies
+                ├── Verified Companies
+                ├── Active Companies
+                ├── Inactive Companies
+                ├── Companies by Industry
+                ├── Companies by Location
+                └── Companies Registered Over Time
+                ↓
+Include Company Performance Metrics
+                ├── Jobs Posted
+                ├── Active Jobs
+                ├── Applications Received
+                └── Hires
+                ↓
+Generate Report File (Optional)
+                ↓
+Return Company Report
+                ↓
+Return 200 OK
+
+GET /api/reports/recruiters  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Report Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Company
+                ├── Account Status
+                ├── Verification Status
+                ├── Location
+                └── Date Range
+                ↓
+Fetch Recruiter Data
+                ↓
+Generate Recruiter Report
+                ├── Total Recruiters
+                ├── Active Recruiters
+                ├── Inactive Recruiters
+                ├── Verified Recruiters
+                └── Recruiters by Company
+                ↓
+Include Recruitment Metrics
+                ├── Jobs Posted
+                ├── Active Jobs
+                ├── Applications Received
+                ├── Interviews Conducted
+                └── Hires Made
+                ↓
+Generate Report File (Optional)
+                ↓
+Return Recruiter Report
+                ↓
+Return 200 OK
+
+GET /api/reports/export  
+Admin / Authorized User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Unauthorized Role → Return 403 Forbidden
+          └── Authorized
+                ↓
+Report Controller
+                ↓
+Validate Export Parameters
+                ├── Invalid → Return 400 Bad Request
+                └── Valid
+                      ↓
+Determine Report Type
+                      ├── Users
+                      ├── Jobs
+                      ├── Applications
+                      ├── Companies
+                      └── Recruiters
+                            ↓
+Apply Filters
+                            ↓
+Fetch Report Data
+                            ↓
+Generate Export File
+                            ├── CSV
+                            ├── Excel
+                            └── PDF
+                                  ↓
+Set Response Headers
+                                  ↓
+Stream / Send File
+                                  ↓
+Return 200 OK
+
+GET /api/admin/applicants  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Search
+                ├── Account Status
+                ├── Location
+                └── Registration Date
+                ↓
+Fetch Applicant Profiles
+                ↓
+Populate User Details
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Applicants List
+                ↓
+Return 200 OK
+
+GET /api/admin/applicants/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Find Applicant by ID
+                ├── Applicant Not Found → Return 404 Not Found
+                └── Applicant Found
+                      ↓
+Get Applicant Profile
+                      ↓
+Get User Account Details
+                      ↓
+Get Application History
+                      ↓
+Get Education / Experience / Certifications
+                      ↓
+Get Account Status
+                      ↓
+Return Applicant Details
+                      ↓
+Return 200 OK
+
+PATCH /api/admin/applicants/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Find Applicant by ID
+                ├── Applicant Not Found → Return 404 Not Found
+                └── Applicant Found
+                      ↓
+Validate Updated Data
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Restricted Fields
+                            ├── Not Allowed → Return 403 Forbidden
+                            └── Allowed
+                                  ↓
+Update Applicant / User Profile
+                                  ↓
+Save Changes
+                                  ↓
+Create Audit Log
+                                  ↓
+Return Updated Applicant
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/applicants/:id/suspend  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Find Applicant by ID
+                ├── Applicant Not Found → Return 404 Not Found
+                └── Applicant Found
+                      ↓
+Check Current Account Status
+                      ├── Already Suspended → Return 400 Bad Request
+                      └── Active
+                            ↓
+Suspend Applicant Account
+                            ↓
+Set Suspension Status / Reason / Date
+                            ↓
+Invalidate Active Sessions / Tokens
+                            ↓
+Create Audit Log
+                            ↓
+Send Suspension Notification
+                            ↓
+Return Updated Applicant
+                            ↓
+Return 200 OK
+
+PATCH /api/admin/applicants/:id/activate  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Find Applicant by ID
+                ├── Applicant Not Found → Return 404 Not Found
+                └── Applicant Found
+                      ↓
+Check Current Account Status
+                      ├── Already Active → Return 400 Bad Request
+                      └── Suspended
+                            ↓
+Activate Applicant Account
+                            ↓
+Remove Suspension Status / Reason / Date
+                            ↓
+Create Audit Log
+                            ↓
+Send Activation Notification
+                            ↓
+Return Updated Applicant
+                            ↓
+Return 200 OK
+
+DELETE /api/admin/applicants/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Applicant Controller
+                ↓
+Find Applicant by ID
+                ├── Applicant Not Found → Return 404 Not Found
+                └── Applicant Found
+                      ↓
+Check Applicant Dependencies
+                      ├── Has Active Applications / Records
+                      │       ↓
+                      │   Soft Delete Instead
+                      └── No Critical Dependencies
+                            ↓
+Delete / Soft Delete Applicant Account
+                            ↓
+Invalidate Active Sessions / Tokens
+                            ↓
+Create Audit Log
+                            ↓
+Return Success Response
+                            ↓
+Return 200 OK
+
+GET /api/admin/recruiters  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Search
+                ├── Company
+                ├── Account Status
+                ├── Verification Status
+                └── Registration Date
+                ↓
+Fetch Recruiter Profiles
+                ↓
+Populate User & Company Details
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Recruiters List
+                ↓
+Return 200 OK
+
+POST /api/admin/recruiters  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Validate Recruiter Data
+                ├── Invalid → Return 400 Bad Request
+                └── Valid
+                      ↓
+Check Email / Account Already Exists
+                      ├── Exists → Return 409 Conflict
+                      └── Not Exists
+                            ↓
+Check Company Exists
+                            ├── Not Found → Return 404 Not Found
+                            └── Found
+                                  ↓
+Create User Account
+                                  ↓
+Create Recruiter Profile
+                                  ↓
+Assign Company & Recruiter Role
+                                  ↓
+Create Audit Log
+                                  ↓
+Send Account Setup / Welcome Notification
+                                  ↓
+Return Created Recruiter
+                                  ↓
+Return 201 Created
+
+PATCH /api/admin/recruiters/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Find Recruiter by ID
+                ├── Recruiter Not Found → Return 404 Not Found
+                └── Recruiter Found
+                      ↓
+Validate Updated Data
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Restricted Fields
+                            ├── Not Allowed → Return 403 Forbidden
+                            └── Allowed
+                                  ↓
+Update Recruiter Profile / Account
+                                  ↓
+Save Changes
+                                  ↓
+Create Audit Log
+                                  ↓
+Send Update Notification (Optional)
+                                  ↓
+Return Updated Recruiter
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/recruiters/:id/suspend  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Find Recruiter by ID
+                ├── Recruiter Not Found → Return 404 Not Found
+                └── Recruiter Found
+                      ↓
+Check Current Account Status
+                      ├── Already Suspended → Return 400 Bad Request
+                      └── Active
+                            ↓
+Suspend Recruiter Account
+                            ↓
+Set Suspension Status / Reason / Date
+                            ↓
+Invalidate Active Sessions / Tokens
+                            ↓
+Create Audit Log
+                            ↓
+Send Suspension Notification
+                            ↓
+Return Updated Recruiter
+                            ↓
+Return 200 OK
+
+PATCH /api/admin/recruiters/:id/activate  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Find Recruiter by ID
+                ├── Recruiter Not Found → Return 404 Not Found
+                └── Recruiter Found
+                      ↓
+Check Current Account Status
+                      ├── Already Active → Return 400 Bad Request
+                      └── Suspended
+                            ↓
+Activate Recruiter Account
+                            ↓
+Remove Suspension Status / Reason / Date
+                            ↓
+Create Audit Log
+                            ↓
+Send Activation Notification
+                            ↓
+Return Updated Recruiter
+                            ↓
+Return 200 OK
+
+DELETE /api/admin/recruiters/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Recruiter Controller
+                ↓
+Find Recruiter by ID
+                ├── Recruiter Not Found → Return 404 Not Found
+                └── Recruiter Found
+                      ↓
+Check Recruiter Dependencies
+                      ├── Has Active Jobs / Applications
+                      │       ↓
+                      │   Soft Delete Instead
+                      └── No Critical Dependencies
+                            ↓
+Delete / Soft Delete Recruiter Account
+                            ↓
+Invalidate Active Sessions / Tokens
+                            ↓
+Create Audit Log
+                            ↓
+Return Success Response
+                            ↓
+Return 200 OK
+
+GET /api/admin/companies  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Search
+                ├── Industry
+                ├── Location
+                ├── Verification Status
+                ├── Account Status
+                └── Registration Date
+                ↓
+Fetch Companies
+                ↓
+Populate Company Owner / Recruiter Details
+                ↓
+Get Company Statistics (Optional)
+                ├── Jobs Posted
+                ├── Active Jobs
+                └── Applications Received
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Companies List
+                ↓
+Return 200 OK
+
+POST /api/admin/companies  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Validate Company Data
+                ├── Invalid → Return 400 Bad Request
+                └── Valid
+                      ↓
+Check Company Name / Registration Details
+                      ├── Already Exists → Return 409 Conflict
+                      └── Not Exists
+                            ↓
+Create Company
+                            ↓
+Assign Company Owner / Recruiter (if provided)
+                            ↓
+Set Initial Verification / Account Status
+                            ↓
+Create Audit Log
+                            ↓
+Return Created Company
+                            ↓
+Return 201 Created
+
+PATCH /api/admin/companies/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Validate Updated Company Data
+                      ├── Invalid → Return 400 Bad Request
+                      └── Valid
+                            ↓
+Check Company Name / Registration Conflict
+                            ├── Conflict → Return 409 Conflict
+                            └── No Conflict
+                                  ↓
+Update Company Profile
+                                  ↓
+Update Verification / Account Status (if permitted)
+                                  ↓
+Save Changes
+                                  ↓
+Create Audit Log
+                                  ↓
+Return Updated Company
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/companies/:id/verify  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Check Verification Status
+                      ├── Already Verified → Return 400 Bad Request
+                      └── Not Verified
+                            ↓
+Verify Company
+                            ↓
+Set Verification Status to Verified
+                            ↓
+Set Verification Date / Verified By
+                            ↓
+Create Audit Log
+                            ↓
+Send Verification Notification
+                            ↓
+Return Updated Company
+                            ↓
+Return 200 OK
+
+PATCH /api/admin/companies/:id/reject  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Check Verification Status
+                      ├── Already Verified → Return 400 Bad Request
+                      └── Pending / Unverified
+                            ↓
+Validate Rejection Reason
+                            ├── Missing / Invalid → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Reject Company Verification
+                                  ↓
+Set Verification Status to Rejected
+                                  ↓
+Save Rejection Reason / Date / Admin ID
+                                  ↓
+Create Audit Log
+                                  ↓
+Send Rejection Notification
+                                  ↓
+Return Updated Company
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/companies/:id/suspend  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Check Current Account Status
+                      ├── Already Suspended → Return 400 Bad Request
+                      └── Active
+                            ↓
+Validate Suspension Reason
+                            ├── Invalid / Missing → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Suspend Company
+                                  ↓
+Set Suspension Status / Reason / Date
+                                  ↓
+Restrict Company Activity
+                                  ├── Disable Active Jobs
+                                  └── Prevent New Job Posts
+                                  ↓
+Create Audit Log
+                                  ↓
+Send Suspension Notification
+                                  ↓
+Return Updated Company
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/companies/:id/activate  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Check Current Account Status
+                      ├── Already Active → Return 400 Bad Request
+                      └── Suspended
+                            ↓
+Activate Company
+                            ↓
+Remove Suspension Status / Reason / Date
+                            ↓
+Restore Company Activity
+                            ├── Re-enable Eligible Jobs
+                            └── Allow New Job Posts
+                            ↓
+Create Audit Log
+                            ↓
+Send Activation Notification
+                            ↓
+Return Updated Company
+                            ↓
+Return 200 OK
+
+DELETE /api/admin/companies/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Company Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Check Company Dependencies
+                      ├── Has Active Jobs / Applications
+                      │       ↓
+                      │   Soft Delete Company
+                      └── No Critical Dependencies
+                            ↓
+Delete / Soft Delete Company
+                            ↓
+Handle Related Recruiters
+                            ↓
+Handle Company Jobs
+                            ↓
+Invalidate Company Sessions / Access
+                            ↓
+Create Audit Log
+                            ↓
+Return Success Response
+                            ↓
+Return 200 OK
+
+GET /api/admin/jobs  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Search
+                ├── Company
+                ├── Category
+                ├── Job Status
+                ├── Location
+                └── Date Range
+                ↓
+Fetch Jobs
+                ↓
+Populate Company & Category Details
+                ↓
+Get Application Count per Job
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Jobs List
+                ↓
+Return 200 OK
+
+PATCH /api/admin/jobs/:id/feature  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Check Current Feature Status
+                      ├── Already Featured → Return 400 Bad Request
+                      └── Not Featured
+                            ↓
+Feature Job
+                            ↓
+Set Featured Status = true
+                            ↓
+Set Featured At / Featured By
+                            ↓
+Create Audit Log
+                            ↓
+Notify Recruiter (Optional)
+                            ↓
+Return Updated Job
+                            ↓
+Return 200 OK
+
+PATCH /api/admin/jobs/:id/unfeature  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Check Current Feature Status
+                      ├── Not Featured → Return 400 Bad Request
+                      └── Featured
+                            ↓
+Unfeature Job
+                            ↓
+Set Featured Status = false
+                            ↓
+Clear Featured At / Featured By
+                            ↓
+Create Audit Log
+                            ↓
+Notify Recruiter (Optional)
+                            ↓
+Return Updated Job
+                            ↓
+Return 200 OK
+
+PATCH /api/admin/jobs/:id/suspend  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Check Current Job Status
+                      ├── Already Suspended → Return 400 Bad Request
+                      └── Active / Published
+                            ↓
+Validate Suspension Reason
+                            ├── Invalid / Missing → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Suspend Job
+                                  ↓
+Set Job Status = Suspended
+                                  ↓
+Save Suspension Reason / Date / Admin ID
+                                  ↓
+Remove Job from Public Listings
+                                  ↓
+Create Audit Log
+                                  ↓
+Notify Recruiter
+                                  ↓
+Return Updated Job
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/jobs/:id/restore  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Check Current Job Status
+                      ├── Not Suspended → Return 400 Bad Request
+                      └── Suspended
+                            ↓
+Check Company / Recruiter Account Status
+                            ├── Suspended / Inactive → Return 400 Bad Request
+                            └── Active
+                                  ↓
+Restore Job
+                                  ↓
+Set Job Status to Active / Published
+                                  ↓
+Clear Suspension Reason / Date
+                                  ↓
+Create Audit Log
+                                  ↓
+Notify Recruiter
+                                  ↓
+Return Updated Job
+                                  ↓
+Return 200 OK
+
+DELETE /api/admin/jobs/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Job Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Check Job Dependencies
+                      ├── Has Applications / Interviews
+                      │       ↓
+                      │   Soft Delete Job
+                      └── No Critical Dependencies
+                            ↓
+Delete / Soft Delete Job
+                            ↓
+Handle Related Records
+                            ├── Applications
+                            ├── Interviews
+                            └── Saved Jobs
+                            ↓
+Create Audit Log
+                            ↓
+Return Success Response
+                            ↓
+Return 200 OK
+
+GET /api/admin/reviews  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Review Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Rating
+                ├── Company
+                ├── Applicant
+                ├── Review Status
+                └── Date Range
+                ↓
+Fetch Reviews
+                ↓
+Populate Reviewer & Company Details
+                ↓
+Apply Sorting
+                ↓
+Paginate Results
+                ↓
+Return Reviews List
+                ↓
+Return 200 OK
+
+PATCH /api/admin/reviews/:id/hide  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Review Controller
+                ↓
+Find Review by ID
+                ├── Review Not Found → Return 404 Not Found
+                └── Review Found
+                      ↓
+Check Current Review Status
+                      ├── Already Hidden → Return 400 Bad Request
+                      └── Visible
+                            ↓
+Validate Hide Reason
+                            ├── Invalid / Missing → Return 400 Bad Request
+                            └── Valid
+                                  ↓
+Hide Review
+                                  ↓
+Set Review Status = Hidden
+                                  ↓
+Save Hide Reason / Date / Admin ID
+                                  ↓
+Remove Review from Public Listings
+                                  ↓
+Recalculate Company Rating
+                                  ↓
+Create Audit Log
+                                  ↓
+Notify Reviewer (Optional)
+                                  ↓
+Return Updated Review
+                                  ↓
+Return 200 OK
+
+PATCH /api/admin/reviews/:id/restore  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Review Controller
+                ↓
+Find Review by ID
+                ├── Review Not Found → Return 404 Not Found
+                └── Review Found
+                      ↓
+Check Current Review Status
+                      ├── Already Visible → Return 400 Bad Request
+                      └── Hidden
+                            ↓
+Restore Review
+                            ↓
+Set Review Status = Visible
+                            ↓
+Clear Hide Reason / Date
+                            ↓
+Recalculate Company Rating
+                            ↓
+Create Audit Log
+                            ↓
+Notify Reviewer (Optional)
+                            ↓
+Return Updated Review
+                            ↓
+Return 200 OK
+
+DELETE /api/admin/reviews/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Admin Review Controller
+                ↓
+Find Review by ID
+                ├── Review Not Found → Return 404 Not Found
+                └── Review Found
+                      ↓
+Delete Review
+                      ↓
+Recalculate Company Rating
+                      ↓
+Create Audit Log
+                      ↓
+Return Success Response
+                      ↓
+Return 200 OK
+
+GET /api/admin/audit-logs  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Audit Log Controller
+                ↓
+Get Query Parameters
+                ↓
+Apply Filters
+                ├── Admin / User
+                ├── Action
+                ├── Resource Type
+                ├── Resource ID
+                ├── Date Range
+                └── IP Address
+                ↓
+Fetch Audit Logs
+                ↓
+Populate Actor Information
+                ↓
+Apply Sorting (Newest First)
+                ↓
+Paginate Results
+                ↓
+Return Audit Logs
+                ↓
+Return 200 OK
+
+GET /api/admin/audit-logs/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Audit Log Controller
+                ↓
+Find Audit Log by ID
+                ├── Audit Log Not Found → Return 404 Not Found
+                └── Audit Log Found
+                      ↓
+Get Actor Information
+                      ↓
+Get Resource Information
+                      ↓
+Return Audit Log Details
+                      ↓
+Return 200 OK
+
+GET /api/admin/activity/user/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Activity Controller
+                ↓
+Find User by ID
+                ├── User Not Found → Return 404 Not Found
+                └── User Found
+                      ↓
+Fetch User Activity
+                      ↓
+Get Activity Records
+                      ├── Logins / Logouts
+                      ├── Profile Updates
+                      ├── Applications
+                      ├── Jobs / Reviews
+                      ├── Messages
+                      └── Account Actions
+                            ↓
+Apply Filters / Date Range
+                            ↓
+Sort by Latest Activity
+                            ↓
+Paginate Results
+                            ↓
+Return User Activity
+                            ↓
+Return 200 OK
+
+GET /api/admin/activity/company/:id  
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Activity Controller
+                ↓
+Find Company by ID
+                ├── Company Not Found → Return 404 Not Found
+                └── Company Found
+                      ↓
+Fetch Company Activity
+                      ↓
+Get Activity Records
+                      ├── Company Profile Updates
+                      ├── Jobs Created / Updated
+                      ├── Jobs Suspended / Restored
+                      ├── Applications Received
+                      ├── Interviews
+                      ├── Recruiter Actions
+                      └── Verification / Account Actions
+                            ↓
+Apply Filters / Date Range
+                            ↓
+Sort by Latest Activity
+                            ↓
+Paginate Results
+                            ↓
+Return Company Activity
+                            ↓
+Return 200 OK
+
+GET /api/admin/activity/job/:id   
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Role Authorization Middleware
+          ├── Not Admin → Return 403 Forbidden
+          └── Admin
+                ↓
+Activity Controller
+                ↓
+Find Job by ID
+                ├── Job Not Found → Return 404 Not Found
+                └── Job Found
+                      ↓
+Fetch Job Activity
+                      ↓
+Get Activity Records
+                      ├── Job Created
+                      ├── Job Updated
+                      ├── Job Published / Closed
+                      ├── Job Featured / Unfeatured
+                      ├── Job Suspended / Restored
+                      ├── Applications Received
+                      └── Recruiter / Admin Actions
+                            ↓
+Apply Filters / Date Range
+                            ↓
+Sort by Latest Activity
+                            ↓
+Paginate Results
+                            ↓
+Return Job Activity
+                            ↓
+Return 200 OK
+
+GET /api/support/tickets
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Support Ticket Controller
+          ↓
+Get User ID from Token
+          ↓
+Find Support Tickets Belonging to User
+          ↓
+Apply Filters
+          ├── Status
+          ├── Priority
+          ├── Category
+          └── Date Range
+          ↓
+Sort Tickets by Latest Update
+          ↓
+Paginate Results
+          ↓
+Return Tickets List
+          ↓
+Return 200 OK
+
+POST /api/support/tickets
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+    ├── Invalid/Expired → Return 401 Unauthorized
+    └── Valid
+          ↓
+Support Ticket Controller
+          ↓
+Validate Ticket Data
+          ├── Invalid → Return 400 Bad Request
+          └── Valid
+                ↓
+Create Support Ticket
+                ↓
+Generate Ticket Number
+                ↓
+Set Initial Status = Open
+                ↓
+Save Ticket
+                ↓
+Create First Support Message
+                ↓
+Notify Support Team
+                ↓
+Return Created Ticket
+                ↓
+Return 201 Created
+
+GET /api/support/tickets/:id
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Ticket Controller
+          ↓
+Find Ticket by ID
+          ├── Ticket Not Found → Return 404 Not Found
+          └── Ticket Found
+                ↓
+Verify User Owns Ticket
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Get Ticket Details
+                      ↓
+Get Ticket Messages
+                      ↓
+Get Attachments (Optional)
+                      ↓
+Return Ticket Details
+                      ↓
+Return 200 OK
+
+PATCH /api/support/tickets/:id
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Ticket Controller
+          ↓
+Find Ticket by ID
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Ticket Ownership
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Validate Updated Data
+                      ↓
+Update Ticket Details
+                      ↓
+Save Changes
+                      ↓
+Return Updated Ticket
+                      ↓
+Return 200 OK
+
+PATCH /api/support/tickets/:id/close
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Ticket Controller
+          ↓
+Find Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Ticket Owner
+                ↓
+Update Status = Closed
+                ↓
+Set Closed Date
+                ↓
+Save Ticket
+                ↓
+Notify Support Team
+                ↓
+Return Updated Ticket
+                ↓
+Return 200 OK
+
+PATCH /api/support/tickets/:id/close
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Ticket Controller
+          ↓
+Find Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Ticket Owner
+                ↓
+Update Status = Closed
+                ↓
+Set Closed Date
+                ↓
+Save Ticket
+                ↓
+Notify Support Team
+                ↓
+Return Updated Ticket
+                ↓
+Return 200 OK
+
+DELETE /api/support/tickets/:id
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Ticket Controller
+          ↓
+Find Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify Ticket Ownership
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Soft Delete Ticket
+                      ↓
+Hide Ticket From User
+                      ↓
+Create Audit Log
+                      ↓
+Return 200 OK
+
+GET /api/support/tickets/:id/messages
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Message Controller
+          ↓
+Find Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Verify User Has Access
+                ├── No → Return 403 Forbidden
+                └── Yes
+                      ↓
+Fetch Messages
+                      ↓
+Populate Sender Details
+                      ↓
+Sort by Created Date
+                      ↓
+Return Messages
+                      ↓
+Return 200 OK
+
+POST /api/support/tickets/:id/messages
+User
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Support Message Controller
+          ↓
+Find Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Check Ticket Status
+                ├── Closed → Return 400 Bad Request
+                └── Open
+                      ↓
+Validate Message Content
+                      ↓
+Create Support Message
+                      ↓
+Link Message to Ticket
+                      ↓
+Update Ticket Last Activity
+                      ↓
+Notify Other Party
+                      ↓
+Return Created Message
+                      ↓
+Return 201 Created
+
+GET /api/admin/support/tickets
+Admin
+    ↓
+Auth Middleware
+    ↓
+Verify Access Token
+          ↓
+Admin Authorization
+          ↓
+Support Admin Controller
+          ↓
+Fetch All Support Tickets
+          ↓
+Apply Filters
+          ├── Status
+          ├── Priority
+          ├── Assigned Staff
+          └── Category
+          ↓
+Sort Tickets
+          ↓
+Paginate
+          ↓
+Return Tickets
+          ↓
+Return 200 OK
+
+PATCH /api/admin/support/tickets/:id/status
+Admin
+    ↓
+Auth Middleware
+    ↓
+Admin Authorization
+          ↓
+Find Support Ticket
+          ├── Not Found → Return 404 Not Found
+          └── Found
+                ↓
+Validate New Status
+                ↓
+Update Ticket Status
+                ├── Open
+                ├── In Progress
+                ├── Resolved
+                └── Closed
+                      ↓
+Create Audit Log
+                      ↓
+Notify User
+                      ↓
+Return Updated Ticket
+                      ↓
+Return 200 OK
+
+PATCH /api/admin/support/tickets/:id/assign
+Admin
+    ↓
+Auth Middleware
+    ↓
+Admin Authorization
+          ↓
+Find Ticket
+          ↓
+Find Support Staff
+          ↓
+Assign Ticket
+          ↓
+Set Assigned Admin ID
+          ↓
+Create Audit Log
+          ↓
+Notify Assigned Staff
+          ↓
+Return Updated Ticket
+          ↓
+Return 200 OK
+
+Project
+config/
+controllers/
+models/
+routes/
+middleware/
+validations/
+utils/
+app.js
+server.js
+.env
+.env.example
+.gitignore
+package.json
+README.md
+
+
+Don’t use socket.io I just need normal message
+Location is the states and cities in Nigeria 
