@@ -4,7 +4,7 @@ A complete REST API for a job portal platform with three user types — **Applic
 
 ## 🚀 Live API
 
-🔗 Base URL: https://your-render-url.onrender.com
+🔗 Base URL: https://job-portal-api-vcgz.onrender.com
 
 ☁️ Deployed on Render and ready for testing with Postman.
 
