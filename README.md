@@ -2,9 +2,11 @@
 
 A complete REST API for a job portal platform with three user types — **Applicants**, **Recruiters**, and **Admins** — built with Express, MongoDB/Mongoose, and JWT authentication.
 
-## Live Api
+## 🚀 Live API
 
-https://job-portal-api-vcgz.onrender.com
+🔗 Base URL: https://your-render-url.onrender.com
+
+☁️ Deployed on Render and ready for testing with Postman.
 
 ## Tech Stack
 
