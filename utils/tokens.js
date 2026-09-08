@@ -23,6 +23,23 @@ const generateRandomToken = () => crypto.randomBytes(32).toString("hex");
 const hashToken = (token) =>
   crypto.createHash("sha256").update(token).digest("hex");
 
+// Short-lived token issued right after a correct password check for an
+// account that has 2FA enabled. It only proves "password was correct for
+// this user" — it deliberately cannot be used as an access token, and must
+// be exchanged for real tokens via a valid TOTP code within a few minutes.
+const generateTwoFactorPendingToken = (payload) =>
+  jwt.sign({ ...payload, purpose: "2fa-pending" }, process.env.JWT_ACCESS_SECRET, {
+    expiresIn: "5m",
+  });
+
+const verifyTwoFactorPendingToken = (token) => {
+  const decoded = jwt.verify(token, process.env.JWT_ACCESS_SECRET);
+  if (decoded.purpose !== "2fa-pending") {
+    throw new Error("Invalid token purpose");
+  }
+  return decoded;
+};
+
 const cookieOptions = () => ({
   httpOnly: true,
   secure: process.env.COOKIE_SECURE === "true",
@@ -38,4 +55,6 @@ module.exports = {
   generateRandomToken,
   hashToken,
   cookieOptions,
+  generateTwoFactorPendingToken,
+  verifyTwoFactorPendingToken,
 };
