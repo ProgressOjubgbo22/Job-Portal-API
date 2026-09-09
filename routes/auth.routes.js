@@ -11,6 +11,9 @@ const {
   verifyEmailSchema,
   resendVerificationSchema,
   changePasswordSchema,
+  twoFactorTokenSchema,
+  disableTwoFactorSchema,
+  twoFactorLoginVerifySchema,
 } = require("../validations/auth.validation");
 
 router.post("/register", validate(registerSchema), authController.register);
@@ -25,5 +28,11 @@ router.post("/logout", authController.logout);
 router.patch("/change-password", authenticate, validate(changePasswordSchema), authController.changePassword);
 router.delete("/delete-account", authenticate, authController.deleteAccount);
 router.get("/me", authenticate, authController.getCurrentUser);
+
+// --- Two-factor authentication (applies to applicant/recruiter/admin alike) ---
+router.post("/2fa/setup", authenticate, authController.setupTwoFactor);
+router.post("/2fa/verify", authenticate, validate(twoFactorTokenSchema), authController.verifyTwoFactorSetup);
+router.post("/2fa/disable", authenticate, validate(disableTwoFactorSchema), authController.disableTwoFactor);
+router.post("/2fa/login-verify", validate(twoFactorLoginVerifySchema), authController.completeTwoFactorLogin);
 
 module.exports = router;

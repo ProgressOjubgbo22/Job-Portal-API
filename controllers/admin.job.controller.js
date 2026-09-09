@@ -7,6 +7,12 @@ const Recruiter = require("../models/Recruiter");
 const { getPaginationOptions } = require("../utils/pagination");
 const { logAction } = require("../utils/auditLog");
 const { notifyUser } = require("../utils/notify");
+const cache = require("../utils/cache");
+
+// Shares the same "jobs" cache namespace as controllers/job.controller.js,
+// since admin actions here (suspend/restore/close/feature/etc.) change the
+// exact same public job listings that controller caches.
+const invalidateJobsCache = () => cache.bumpNamespaceVersion("jobs");
 
 // GET /api/admin/jobs
 const getAllJobs = asyncHandler(async (req, res) => {
@@ -58,6 +64,7 @@ const updateJob = asyncHandler(async (req, res) => {
 
   Object.assign(job, req.body);
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "admin_update_job", entity: "Job", entityId: job._id });
 
@@ -78,6 +85,7 @@ const deleteJob = asyncHandler(async (req, res) => {
   } else {
     await job.deleteOne();
   }
+  await invalidateJobsCache();
 
   await logAction({
     req,
@@ -102,6 +110,7 @@ const suspendJob = asyncHandler(async (req, res) => {
   job.suspensionReason = req.body.reason;
   job.suspendedAt = new Date();
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "suspend_job", entity: "Job", entityId: job._id, description: req.body.reason });
   await notifyRecruiter(job, "Job suspended", `Your job "${job.title}" has been suspended. Reason: ${req.body.reason}`);
@@ -126,6 +135,7 @@ const restoreJob = asyncHandler(async (req, res) => {
   job.suspensionReason = undefined;
   job.suspendedAt = undefined;
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "restore_job", entity: "Job", entityId: job._id });
   await notifyRecruiter(job, "Job restored", `Your job "${job.title}" has been restored`);
@@ -143,6 +153,7 @@ const featureJob = asyncHandler(async (req, res) => {
   job.featuredAt = new Date();
   job.featuredBy = req.user._id;
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "feature_job", entity: "Job", entityId: job._id });
   await notifyRecruiter(job, "Job featured", `Your job "${job.title}" is now featured`);
@@ -160,6 +171,7 @@ const unfeatureJob = asyncHandler(async (req, res) => {
   job.featuredAt = undefined;
   job.featuredBy = undefined;
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "unfeature_job", entity: "Job", entityId: job._id });
   await notifyRecruiter(job, "Job unfeatured", `Your job "${job.title}" is no longer featured`);
@@ -176,6 +188,7 @@ const closeJob = asyncHandler(async (req, res) => {
   job.isActive = false;
   job.closedAt = new Date();
   await job.save();
+  await invalidateJobsCache();
 
   await logAction({ req, action: "admin_close_job", entity: "Job", entityId: job._id });
 

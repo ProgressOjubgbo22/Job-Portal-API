@@ -1,5 +1,6 @@
 const { StatusCodes } = require("http-status-codes");
 const ApiError = require("../utils/apiError");
+const logger = require("../config/logger");
 
 const notFoundHandler = (req, res, next) => {
   next(ApiError.notFound(`Route not found: ${req.method} ${req.originalUrl}`));
@@ -33,6 +34,16 @@ const errorHandler = (err, req, res, next) => {
 
   if (process.env.NODE_ENV === "development") {
     console.error(err);
+  }
+
+  // Always log — not just in development — so failures are captured in
+  // logs/error.log (and stdout) regardless of environment. Client (4xx)
+  // errors are logged at a lower level than genuine server failures.
+  const logLine = `${req.method} ${req.originalUrl} -> ${error.statusCode} ${error.message}`;
+  if (error.statusCode >= 500) {
+    logger.error(logLine, { stack: err.stack });
+  } else {
+    logger.warn(logLine);
   }
 
   res.status(error.statusCode).json({

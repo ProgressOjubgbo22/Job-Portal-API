@@ -1,63 +1,46 @@
-const nodemailer = require("nodemailer");
+const { emailQueue } = require("../config/queue");
+const logger = require("../config/logger");
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: Number(process.env.SMTP_PORT) === 465,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-const sendEmail = async ({ to, subject, html, text }) => {
+/**
+ * Public email API used throughout the app (controllers/*). The function
+ * signatures are unchanged from the original synchronous implementation —
+ * only the internals changed: instead of calling nodemailer directly and
+ * blocking the request/response cycle on an SMTP round-trip, each call now
+ * enqueues a background job (BullMQ, backed by Redis) that a worker process
+ * (workers/email.worker.js) picks up, sends, and retries on failure.
+ *
+ * This means no controller code had to change to get: background
+ * processing, automatic retries with backoff, and a durable queue that
+ * survives a server restart.
+ */
+const enqueueEmail = async (type, payload) => {
   try {
-    await transporter.sendMail({
-      from: process.env.EMAIL_FROM || process.env.SMTP_USER,
-      to,
-      subject,
-      html,
-      text,
+    await emailQueue.add(type, payload, {
+      jobId: undefined, // let BullMQ generate one; idempotency is handled separately where needed
     });
   } catch (err) {
-    // Do not crash the request flow because of a transient email failure;
-    // log it so it can be investigated / retried.
-    console.error(`Failed to send email to ${to}: ${err.message}`);
+    // If Redis/the queue is unavailable, don't silently drop the email —
+    // fall back to attempting immediate delivery so core flows (register,
+    // password reset) still work in a degraded environment.
+    logger.error(`Failed to enqueue "${type}" email job, attempting direct send: ${err.message}`);
+    const { deliverEmail, EMAIL_BUILDERS } = require("./mailer");
+    try {
+      const message = EMAIL_BUILDERS[type] ? EMAIL_BUILDERS[type](payload) : payload;
+      await deliverEmail(message);
+    } catch (sendErr) {
+      logger.error(`Direct email fallback also failed for "${type}": ${sendErr.message}`);
+    }
   }
 };
 
-const sendVerificationEmail = (to, token) => {
-  const link = `${process.env.CLIENT_URL}/verify-email?token=${token}`;
-  return sendEmail({
-    to,
-    subject: "Verify your Job Portal account",
-    html: `<p>Welcome! Please verify your email by clicking the link below:</p>
-           <p><a href="${link}">${link}</a></p>
-           <p>This link expires in 24 hours.</p>`,
-  });
-};
+const sendEmail = ({ to, subject, html, text }) => enqueueEmail("generic", { to, subject, html, text });
 
-const sendPasswordResetEmail = (to, token) => {
-  const link = `${process.env.CLIENT_URL}/reset-password?token=${token}`;
-  return sendEmail({
-    to,
-    subject: "Reset your Job Portal password",
-    html: `<p>You requested a password reset. Click the link below to set a new password:</p>
-           <p><a href="${link}">${link}</a></p>
-           <p>If you did not request this, please ignore this email. This link expires in 1 hour.</p>`,
-  });
-};
+const sendVerificationEmail = (to, token) => enqueueEmail("verification", { to, token });
 
-const sendRecruiterInviteEmail = (to, token, companyName) => {
-  const link = `${process.env.CLIENT_URL}/recruiter/accept-invitation?token=${token}`;
-  return sendEmail({
-    to,
-    subject: `You've been invited to join ${companyName} on Job Portal`,
-    html: `<p>You have been invited to join <strong>${companyName}</strong> as a recruiter.</p>
-           <p>Click the link below to set your password and activate your account:</p>
-           <p><a href="${link}">${link}</a></p>`,
-  });
-};
+const sendPasswordResetEmail = (to, token) => enqueueEmail("passwordReset", { to, token });
+
+const sendRecruiterInviteEmail = (to, token, companyName) =>
+  enqueueEmail("recruiterInvite", { to, token, companyName });
 
 module.exports = {
   sendEmail,

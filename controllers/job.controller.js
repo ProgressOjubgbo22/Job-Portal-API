@@ -8,8 +8,20 @@ const ApplicantProfile = require("../models/ApplicantProfile");
 const SavedJob = require("../models/SavedJob");
 const Application = require("../models/Application");
 const { getPaginationOptions } = require("../utils/pagination");
+const cache = require("../utils/cache");
 
 const PUBLIC_FILTER = { status: "published", isActive: true };
+
+// Public job listings/details are read far more often than they change, so
+// they're cached in Redis. Every write to a Job (create/update/publish/
+// close/etc.) bumps this namespace's version, which instantly invalidates
+// every previously cached list/detail key without needing to track or scan
+// for individual keys.
+const JOBS_CACHE_NAMESPACE = "jobs";
+const JOBS_LIST_TTL_SECONDS = 60;
+const JOB_DETAIL_TTL_SECONDS = 120;
+
+const invalidateJobsCache = () => cache.bumpNamespaceVersion(JOBS_CACHE_NAMESPACE);
 
 const buildFilterQuery = (query) => {
   const filter = { ...PUBLIC_FILTER, applicationDeadline: { $gte: new Date() } };
@@ -49,12 +61,14 @@ const browseJobs = asyncHandler(async (req, res) => {
   const filter = buildFilterQuery(req.query);
   const { page, limit, sort } = getPaginationOptions(req.query);
 
-  const result = await Job.paginate(filter, {
-    page,
-    limit,
-    sort,
-    populate: POPULATE_LIST,
-  });
+ const version = await cache.getNamespaceVersion(JOBS_CACHE_NAMESPACE);
+  const cacheKey = `${JOBS_CACHE_NAMESPACE}:v${version}:list:${JSON.stringify(req.query)}`;
+ 
+  const { data: result } = await cache.getOrSet(
+    cacheKey,
+    () => Job.paginate(filter, { page, limit, sort, populate: POPULATE_LIST }),
+    JOBS_LIST_TTL_SECONDS
+  );
 
   return new ApiResponse(200, result).send(res);
 });
@@ -153,26 +167,51 @@ const jobsByCategory = asyncHandler(async (req, res) => {
 
 // GET /api/jobs/:id
 const getJobDetails = asyncHandler(async (req, res) => {
-  const job = await Job.findById(req.params.id)
-    .populate("company")
-    .populate("category", "name")
-    .populate({ path: "recruiter", populate: { path: "user", select: "firstName lastName email" } });
 
-  if (!job) throw ApiError.notFound("Job not found");
-  if (!job.isPubliclyVisible() && !(req.user && String(job.recruiter?.user?._id) === String(req.user._id))) {
-    throw ApiError.notFound("Job not found");
+  const version = await cache.getNamespaceVersion(JOBS_CACHE_NAMESPACE);
+  const cacheKey = `${JOBS_CACHE_NAMESPACE}:v${version}:detail:${req.params.id}`;
+  // Only the anonymous/public view is ever read from or written to the
+  // shared cache. A recruiter viewing their own draft job (a private view)
+  // always goes straight to the database, so a draft's data can never leak
+  // through a cache key that other users could also read.
+  const cached = req.user ? null : await cache.get(cacheKey);
+  
+  let job;
+  let relatedJobs;
+  
+  if (cached) {
+    ({ job, relatedJobs } = cached);
+  } else {
+    job = await Job.findById(req.params.id)
+      .populate("company")
+      .populate("category", "name")
+      .populate({ path: "recruiter", populate: { path: "user", select: "firstName lastName email" } });
+  
+    if (!job) throw ApiError.notFound("Job not found");
+    if (!job.isPubliclyVisible() && !(req.user && String(job.recruiter?.user?._id) === String(req.user._id))) {
+      throw ApiError.notFound("Job not found");
+    }
+  
+    relatedJobs = await Job.find({
+      ...PUBLIC_FILTER,
+      category: job.category,
+      _id: { $ne: job._id },
+    })
+      .limit(5)
+      .select("title company state city salaryMin salaryMax employmentType");
+  
+    if (!req.user && job.isPubliclyVisible()) {
+      await cache.set(cacheKey, { job, relatedJobs }, JOB_DETAIL_TTL_SECONDS);
+    }
   }
-
-  job.views += 1;
-  await job.save();
-
-  const relatedJobs = await Job.find({
-    ...PUBLIC_FILTER,
-    category: job.category,
-    _id: { $ne: job._id },
-  })
-    .limit(5)
-    .select("title company state city salaryMin salaryMax employmentType");
+  
+    // View count is incremented atomically (a single $inc, not a
+    // read-modify-write) so concurrent requests never lose an increment to a
+    // race condition, regardless of whether this response came from cache.
+    // The count in the response payload may therefore lag by a request or
+    // two when served from cache - an acceptable trade-off for a popularity
+    // counter, and it self-corrects every time the cache entry expires.
+  await Job.updateOne({ _id: req.params.id }, { $inc: { views: 1 } });
 
   return new ApiResponse(200, { job, relatedJobs }).send(res);
 });
@@ -192,6 +231,7 @@ const createJob = asyncHandler(async (req, res) => {
     status: "draft",
   });
 
+  await invalidateJobsCache();
   return new ApiResponse(201, { job }, "Job created as draft").send(res);
 });
 
@@ -232,6 +272,7 @@ const updateJob = asyncHandler(async (req, res) => {
   Object.assign(job, req.body);
   await job.save();
 
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job updated").send(res);
 });
 
@@ -239,6 +280,7 @@ const updateJob = asyncHandler(async (req, res) => {
 const deleteJob = asyncHandler(async (req, res) => {
   const { job } = await findOwnedJob(req.params.id, req.user._id);
   await job.deleteOne();
+  await invalidateJobsCache();
   return new ApiResponse(200, null, "Job deleted").send(res);
 });
 
@@ -252,6 +294,7 @@ const publishJob = asyncHandler(async (req, res) => {
   job.publishedAt = new Date();
   await job.save();
 
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job published").send(res);
 });
 
@@ -261,6 +304,7 @@ const unpublishJob = asyncHandler(async (req, res) => {
   job.status = "draft";
   job.isActive = false;
   await job.save();
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job unpublished").send(res);
 });
 
@@ -271,6 +315,7 @@ const closeJob = asyncHandler(async (req, res) => {
   job.isActive = false;
   job.closedAt = new Date();
   await job.save();
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job closed").send(res);
 });
 
@@ -283,6 +328,7 @@ const reopenJob = asyncHandler(async (req, res) => {
   job.isActive = true;
   job.closedAt = undefined;
   await job.save();
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job reopened").send(res);
 });
 
@@ -327,6 +373,7 @@ const featureJob = asyncHandler(async (req, res) => {
   job.featuredAt = new Date();
   job.featuredBy = req.user._id;
   await job.save();
+  await invalidateJobsCache();
   return new ApiResponse(200, { job }, "Job featured").send(res);
 });
 

@@ -9,6 +9,7 @@ const rateLimit = require("express-rate-limit");
 
 const apiRoutes = require("./routes");
 const { notFoundHandler, errorHandler } = require("./middleware/errorHandler");
+const logger = require("./config/logger");
 
 const app = express();
 
@@ -27,7 +28,10 @@ app.use(cookieParser());
 // app.use(mongoSanitize());
 
 if (process.env.NODE_ENV !== "test") {
-  app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
+  // HTTP access logs are piped through winston (logger.stream) so they end
+  // up in the same log files/format as the rest of the app's logging,
+  // instead of going straight to stdout on their own.
+  app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev", { stream: logger.stream }));
 }
 
 // // --- Rate limiting ---

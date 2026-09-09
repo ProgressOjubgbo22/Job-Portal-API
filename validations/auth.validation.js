@@ -41,6 +41,20 @@ const changePasswordSchema = z.object({
   newPassword: z.string().min(8).max(72),
 });
 
+const twoFactorTokenSchema = z.object({
+  token: z.string().length(6),
+});
+
+const disableTwoFactorSchema = z.object({
+  password: z.string().min(1).optional(),
+  token: z.string().length(6).optional(),
+});
+
+const twoFactorLoginVerifySchema = z.object({
+  twoFactorToken: z.string().min(10),
+  token: z.string().length(6),
+});
+
 module.exports = {
   registerSchema,
   loginSchema,
@@ -50,4 +64,7 @@ module.exports = {
   verifyEmailSchema,
   resendVerificationSchema,
   changePasswordSchema,
+  twoFactorTokenSchema,
+  disableTwoFactorSchema,
+  twoFactorLoginVerifySchema,
 };

@@ -12,6 +12,12 @@ const {
   cookieOptions,
 } = require("../utils/tokens");
 const {
+  generateTwoFactorSecret,
+  verifyTwoFactorToken,
+  maybeRequireTwoFactor,
+} = require("../utils/twoFactor");
+const { verifyTwoFactorPendingToken } = require("../utils/tokens");
+const {
   sendVerificationEmail,
   sendPasswordResetEmail,
 } = require("../utils/email");
@@ -135,6 +141,11 @@ const login = asyncHandler(async (req, res) => {
 
   if (!user.emailVerified) {
     throw ApiError.forbidden("Please verify your email before logging in");
+  }
+
+  const twoFactorChallenge = maybeRequireTwoFactor(user);
+    if (twoFactorChallenge) {
+      return new ApiResponse(200, twoFactorChallenge, "Two-factor authentication code required").send(res);
   }
 
   const { accessToken, refreshToken } = await issueTokens(user);
@@ -313,6 +324,116 @@ const getCurrentUser = asyncHandler(async (req, res) => {
   return new ApiResponse(200, { user: req.user.toSafeObject() }).send(res);
 });
 
+// --- Two-factor authentication (TOTP) ---
+// These endpoints are role-agnostic: applicant, recruiter, and admin
+// accounts all live on the same User model, so one implementation covers
+// 2FA setup/verification for every login flow (auth/recruiterAuth/adminAuth
+// controllers all just call maybeRequireTwoFactor() after password checks).
+
+// POST /api/auth/2fa/setup (authenticated)
+// Generates a new TOTP secret + QR code. The secret is stored as "temp"
+// until confirmed via /2fa/verify, so a half-finished setup never silently
+// enables 2FA or locks the user out.
+const setupTwoFactor = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+  if (!user) throw ApiError.notFound("User not found");
+  if (user.twoFactorEnabled) throw ApiError.badRequest("Two-factor authentication is already enabled");
+
+  const { base32Secret, otpauthUrl, qrCodeDataUrl } = await generateTwoFactorSecret(user.email);
+  user.twoFactorTempSecret = base32Secret;
+  await user.save();
+
+  return new ApiResponse(
+    200,
+    { qrCode: qrCodeDataUrl, otpauthUrl, secret: base32Secret },
+    "Scan the QR code with your authenticator app, then confirm with a 6-digit code"
+  ).send(res);
+});
+
+// POST /api/auth/2fa/verify (authenticated) - confirms setup
+const verifyTwoFactorSetup = asyncHandler(async (req, res) => {
+  const { token } = req.body;
+  const user = await User.findById(req.user._id).select("+twoFactorTempSecret");
+  if (!user) throw ApiError.notFound("User not found");
+  if (!user.twoFactorTempSecret) {
+    throw ApiError.badRequest("No two-factor setup is in progress. Call /2fa/setup first");
+  }
+
+  const isValid = verifyTwoFactorToken(user.twoFactorTempSecret, token);
+  if (!isValid) throw ApiError.badRequest("Invalid or expired authentication code");
+
+  user.twoFactorSecret = user.twoFactorTempSecret;
+  user.twoFactorTempSecret = undefined;
+  user.twoFactorEnabled = true;
+  await user.save();
+
+  return new ApiResponse(200, null, "Two-factor authentication enabled").send(res);
+});
+
+// POST /api/auth/2fa/disable (authenticated)
+const disableTwoFactor = asyncHandler(async (req, res) => {
+  const { password, token } = req.body;
+  const user = await User.findById(req.user._id).select("+password +twoFactorSecret");
+  if (!user) throw ApiError.notFound("User not found");
+  if (!user.twoFactorEnabled) throw ApiError.badRequest("Two-factor authentication is not enabled");
+
+  // Google-authenticated accounts may have no password set - require a
+  // valid current TOTP code instead in that case.
+  if (user.password) {
+    const validPassword = await user.comparePassword(password);
+    if (!validPassword) throw ApiError.unauthorized("Incorrect password");
+  } else {
+    if (!token || !verifyTwoFactorToken(user.twoFactorSecret, token)) {
+      throw ApiError.unauthorized("Invalid or expired authentication code");
+    }
+  }
+
+  user.twoFactorEnabled = false;
+  user.twoFactorSecret = undefined;
+  user.twoFactorTempSecret = undefined;
+  await user.save();
+
+  return new ApiResponse(200, null, "Two-factor authentication disabled").send(res);
+});
+
+// POST /api/auth/2fa/login-verify (public) - completes a login that was
+// paused by maybeRequireTwoFactor(), for any role.
+const completeTwoFactorLogin = asyncHandler(async (req, res) => {
+  const { twoFactorToken, token } = req.body;
+  if (!twoFactorToken || !token) {
+    throw ApiError.badRequest("twoFactorToken and token are required");
+  }
+
+  let decoded;
+  try {
+    decoded = verifyTwoFactorPendingToken(twoFactorToken);
+  } catch (err) {
+    throw ApiError.unauthorized("Invalid or expired two-factor session, please log in again");
+  }
+
+  const user = await User.findById(decoded.id).select("+twoFactorSecret +refreshToken");
+  if (!user) throw ApiError.notFound("User not found");
+  if (!user.twoFactorEnabled) throw ApiError.badRequest("Two-factor authentication is not enabled for this account");
+  if (["suspended", "inactive", "deleted"].includes(user.status)) {
+    throw ApiError.forbidden(`Account is ${user.status}`);
+  }
+
+  const isValid = verifyTwoFactorToken(user.twoFactorSecret, token);
+  if (!isValid) throw ApiError.unauthorized("Invalid or expired authentication code");
+
+  const { accessToken, refreshToken } = await issueTokens(user);
+  user.lastLogin = new Date();
+  await user.save();
+
+  res.cookie("refreshToken", refreshToken, cookieOptions());
+
+  return new ApiResponse(
+    200,
+    { user: user.toSafeObject(), accessToken, refreshToken },
+    "Login successful"
+  ).send(res);
+});
+
 module.exports = {
   register,
   googleAuth,
@@ -326,4 +447,8 @@ module.exports = {
   changePassword,
   deleteAccount,
   getCurrentUser,
+  setupTwoFactor,
+  verifyTwoFactorSetup,
+  disableTwoFactor,
+  completeTwoFactorLogin,
 };

@@ -9,6 +9,7 @@ const {
   hashToken,
   cookieOptions,
 } = require("../utils/tokens");
+const { maybeRequireTwoFactor } = require("../utils/twoFactor");
 
 const issueTokens = async (user) => {
   const payload = { id: user._id, role: user.role };
@@ -72,6 +73,11 @@ const login = asyncHandler(async (req, res) => {
 
   const isValid = await user.comparePassword(password);
   if (!isValid) throw ApiError.unauthorized("Invalid email or password");
+
+  const twoFactorChallenge = maybeRequireTwoFactor(user);
+  if (twoFactorChallenge) {
+    return new ApiResponse(200, twoFactorChallenge, "Two-factor authentication code required").send(res);
+  }
 
   const { accessToken, refreshToken } = await issueTokens(user);
   user.lastLogin = new Date();

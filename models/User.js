@@ -57,6 +57,11 @@ const userSchema = new mongoose.Schema(
 
     suspensionReason: { type: String },
     suspendedAt: { type: Date },
+
+    // Two-factor authentication (TOTP via speakeasy/qrcode)
+    twoFactorEnabled: { type: Boolean, default: false },
+    twoFactorSecret: { type: String, select: false }, // active secret, set once enabled
+    twoFactorTempSecret: { type: String, select: false }, // pending secret during setup, until confirmed
   },
   { timestamps: true }
 );
@@ -90,6 +95,8 @@ userSchema.methods.toSafeObject = function () {
   delete obj.emailVerificationTokenHash;
   delete obj.passwordResetTokenHash;
   delete obj.invitationTokenHash;
+  delete obj.twoFactorSecret;
+  delete obj.twoFactorTempSecret;
   return obj;
 };
 
