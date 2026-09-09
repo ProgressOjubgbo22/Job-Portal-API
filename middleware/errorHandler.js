@@ -32,10 +32,6 @@ const errorHandler = (err, req, res, next) => {
     }
   }
 
-  if (process.env.NODE_ENV === "development") {
-    console.error(err);
-  }
-
   // Always log — not just in development — so failures are captured in
   // logs/error.log (and stdout) regardless of environment. Client (4xx)
   // errors are logged at a lower level than genuine server failures.
