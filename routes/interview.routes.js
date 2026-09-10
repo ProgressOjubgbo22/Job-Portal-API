@@ -2,6 +2,7 @@ const router = require("express").Router();
 const validate = require("../middleware/validate");
 const { authenticate } = require("../middleware/auth");
 const authorize = require("../middleware/role");
+const idempotency = require("../middleware/idempotency");
 const interviewController = require("../controllers/interview.controller");
 const {
   scheduleInterviewSchema,
@@ -11,7 +12,13 @@ const {
 
 router.use(authenticate);
 
-router.post("/", authorize("recruiter"), validate(scheduleInterviewSchema), interviewController.scheduleInterview);
+router.post(
+  "/",
+  authorize("recruiter"),
+  idempotency(),
+  validate(scheduleInterviewSchema),
+  interviewController.scheduleInterview
+);
 router.get("/", authorize("recruiter"), interviewController.getAllInterviews);
 router.get("/upcoming", authorize("recruiter"), interviewController.upcomingInterviews);
 router.get("/today", authorize("recruiter"), interviewController.todaysInterviews);
