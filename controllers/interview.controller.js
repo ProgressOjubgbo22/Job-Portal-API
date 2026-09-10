@@ -8,6 +8,8 @@ const Recruiter = require("../models/Recruiter");
 const ApplicantProfile = require("../models/ApplicantProfile");
 const { getPaginationOptions } = require("../utils/pagination");
 const { notifyUser } = require("../utils/notify");
+const withTransaction = require("../utils/transaction");
+const { withLock } = require("../utils/lock");
 
 const ELIGIBLE_STATUSES = ["shortlisted", "assessment"];
 
@@ -36,20 +38,48 @@ const scheduleInterview = asyncHandler(async (req, res) => {
     throw ApiError.badRequest("Applicant must be shortlisted or in assessment to schedule an interview");
   }
 
+// Concurrency handling: guard against two near-simultaneous requests
+// (e.g. a recruiter double-clicking "Schedule") both passing the
+// "existing interview?" check before either has written its Interview
+// document. The unique index on Interview.application is the final
+// backstop if Redis is unavailable.
+const lockKey = `lock:schedule-interview:${application._id}`;
+const { locked, result: interview } = await withLock(lockKey, 8000, async () => {
   const existing = await Interview.findOne({ application: application._id });
   if (existing) throw ApiError.conflict("An interview already exists for this application");
 
-  const interview = await Interview.create({
-    application: application._id,
-    recruiter: recruiter._id,
-    date: req.body.date,
-    location: req.body.location,
-    notes: req.body.notes,
+  // Database transaction: the Interview document, the application status
+  // change, and the timeline entry must be committed together - a
+  // failure partway through must not leave an interview scheduled
+  // against an application that still shows an earlier status.
+  return withTransaction(async (session) => {
+    const [createdInterview] = await Interview.create(
+      [
+        {
+          application: application._id,
+          recruiter: recruiter._id,
+          date: req.body.date,
+          location: req.body.location,
+          notes: req.body.notes,
+        },
+      ],
+      { session }
+    );
+ 
+    application.status = "interview_scheduled";
+    await application.save({ session });
+    await ApplicationTimeline.create(
+      [{ application: application._id, status: "interview_scheduled", note: "Interview scheduled", changedBy: req.user._id }],
+      { session }
+    );
+ 
+    return createdInterview;
   });
+});
 
-  application.status = "interview_scheduled";
-  await application.save();
-  await addTimelineEntry(application._id, "interview_scheduled", "Interview scheduled", req.user._id);
+if (!locked) {
+  throw ApiError.conflict("An interview is already being scheduled for this application, please try again shortly");
+}
 
   await notifyApplicant(
     application,

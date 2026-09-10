@@ -8,6 +8,8 @@ const ApplicantProfile = require("../models/ApplicantProfile");
 const Recruiter = require("../models/Recruiter");
 const { getPaginationOptions } = require("../utils/pagination");
 const { notifyUser } = require("../utils/notify");
+const withTransaction = require("../utils/transaction");
+const { withLock } = require("../utils/lock");
 
 const NOT_HIRABLE_STATUSES = ["hired", "offer_accepted", "withdrawn", "rejected"];
 
@@ -48,21 +50,53 @@ const applyForJob = asyncHandler(async (req, res) => {
   }
   if (!profile.resume) throw ApiError.badRequest("Please upload a resume before applying");
 
-  const existing = await Application.findOne({ applicant: profile._id, job: job._id });
-  if (existing) throw ApiError.conflict("You have already applied to this job");
+ // Concurrency handling: a double-click or retried request could send two
+  // "apply" requests for the same applicant+job at nearly the same time.
+  // A short-lived Redis lock serializes those requests (in addition to the
+  // unique (applicant, job) index on Application, which is the ultimate
+  // source of truth if Redis is unavailable).
+  const lockKey = `lock:apply:${profile._id}:${job._id}`;
+  const { locked, result } = await withLock(lockKey, 8000, async () => {
+    const existing = await Application.findOne({ applicant: profile._id, job: job._id });
+    if (existing) throw ApiError.conflict("You have already applied to this job");
 
-  const application = await Application.create({
-    applicant: profile._id,
-    job: job._id,
-    resume: profile.resume,
-    coverLetter,
-    status: "applied",
+    // Database transaction: creating the application, incrementing the
+    // job's applicationsCount, and writing the first timeline entry must
+    // all succeed or all roll back together, so counts never drift from
+    // reality if one of the writes fails partway through.
+    return withTransaction(async (session) => {
+      const [application] = await Application.create(
+        [
+          {
+            applicant: profile._id,
+            job: job._id,
+            resume: profile.resume,
+            coverLetter,
+            status: "applied",
+          },
+        ],
+        { session }
+      );
+    
+      await ApplicationTimeline.create(
+        [{ application: application._id, status: "applied", note: "Application submitted", changedBy: req.user._id }],
+        { session }
+      );
+    
+      // Atomic increment instead of `job.applicationsCount += 1; job.save()`,
+      // which would be a lost-update race under concurrent applications.
+      await Job.updateOne({ _id: job._id }, { $inc: { applicationsCount: 1 } }, { session });
+    
+      return application;
+    });
   });
 
-  await addTimelineEntry(application._id, "applied", "Application submitted", req.user._id);
+  if (!locked) {
+    // Another request for the same applicant+job is already in flight.
+    throw ApiError.conflict("Your application is already being submitted, please wait a moment and check your applications list");
+  }
 
-  job.applicationsCount += 1;
-  await job.save();
+  const application = result;
 
   const recruiter = await Recruiter.findById(job.recruiter).populate("user");
   if (recruiter) {

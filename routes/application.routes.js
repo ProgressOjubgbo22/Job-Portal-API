@@ -2,6 +2,7 @@ const router = require("express").Router();
 const validate = require("../middleware/validate");
 const { authenticate } = require("../middleware/auth");
 const authorize = require("../middleware/role");
+const idempotency = require("../middleware/idempotency");
 const applicationController = require("../controllers/application.controller");
 const recruiterController = require("../controllers/recruiter.controller");
 const {
@@ -13,7 +14,13 @@ const {
 router.use(authenticate);
 
 // Applicant routes
-router.post("/", authorize("applicant"), validate(applySchema), applicationController.applyForJob);
+router.post(
+  "/",
+  authorize("applicant"),
+  idempotency(),
+  validate(applySchema),
+  applicationController.applyForJob
+);
 router.get("/", authorize("applicant"), applicationController.getMyApplications);
 router.get("/drafts", authorize("applicant"), applicationController.getDraftApplications);
 router.get("/:id", authorize("applicant"), applicationController.getApplicationDetails);
